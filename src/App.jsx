@@ -58,13 +58,9 @@ function App() {
           </div>
           <div className='main1'>
             <div className='iconemain2'><BsCurrencyDollar/></div>
-            <div className='textomain'>Coverter limite</div>
+            <div className='textomain'>Converter limite</div>
           </div>
-          <div className='main1'>
-            <div className='iconemain2'><FaInbox/></div>
-            <div className='emprestimo'>115% CDI</div>
-            <div className='textomain'>Caixinha turbo</div>
-          </div>
+          
         </div>
         <div className='preto3'>
           <div className='header1'>
