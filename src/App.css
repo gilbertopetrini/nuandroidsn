@@ -11,8 +11,10 @@ body {
 .main{
   width: 414px;
   height: 896px;
+  padding-top: env(safe-area-inset-top);
 }
 .roxocima{
+  padding-top: env(safe-area-inset-top);
   width: 414px;
   height: 191px;
   background-color: #591E8C;
