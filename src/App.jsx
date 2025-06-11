@@ -11,6 +11,8 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { FaInbox } from "react-icons/fa6";
 import { FaCreditCard } from "react-icons/fa6";
 import ccimg from './assets/ccimg.png';
+import pfp from './assets/pfp.png';
+import { FaRegHeart } from "react-icons/fa";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,12 +24,12 @@ function App() {
           <div className="roxo1">
           </div>
           <div className="roxo2">
-            <div className="pfp"/>
-              <div>
-                <VscEye className="icone"/>
-                <HiOutlineQuestionMarkCircle className="icone"/>
-                <IoShieldCheckmark className="icone"/>
-              </div>
+            <img src={pfp} className="pfp"/>
+            <div>
+              <VscEye className="icone"/>
+              <HiOutlineQuestionMarkCircle className="icone"/>
+              <IoShieldCheckmark className="icone"/>
+            </div>
           </div>
           <div className="roxo3">
             Olá, Gilberto
@@ -36,7 +38,7 @@ function App() {
         <div className="preto1">
           <div>
             <p>Saldo em conta</p>
-            <p className="saldo">R$12.000,00</p>
+            <p className="saldo">R$ 12.000,00</p>
           </div>
           <div className="flecha">
             <MdKeyboardArrowRight />
@@ -87,9 +89,33 @@ function App() {
               <MdKeyboardArrowRight className='cartao2'/>
             </div>
             <p className='p2'>Fatural Atual</p>
-            <p className='p3'>R$532,00</p>
-            <p className='p4'>Limite disponível de R$950,00</p>
+            <p className='p3'>R$ 532,00</p>
+            <p className='p4'>Limite disponível de R$ 950,00</p>
           </div>
+        </div>
+        <div className='preto5'>
+          <div>
+            <div className='cartao'>
+              <p className='p1'>Empréstimo</p>
+              <MdKeyboardArrowRight className='cartao2'/>
+            </div>
+            <p className='p2'>Valor disponível de até</p>
+            <p className='p3'>R$ 10.000,00</p>
+          </div>
+        </div>
+        <div className='preto6'>
+          <div>
+            <div className='cartao'>
+              <p className='p1'>Planeje suas contas</p>
+              <MdKeyboardArrowRight className='cartao2'/>
+            </div>
+            <p className='p2'>Acompanhe, pague e programe com a ajuda do Assistente de pagamentos.</p>
+            <div className='btnacessar'>Acessar</div>
+          </div>
+        </div>
+        <div className='preto7'>
+          <FaRegHeart className='heart' />
+          Avalie esta tela
         </div>
       </div>
     </>
