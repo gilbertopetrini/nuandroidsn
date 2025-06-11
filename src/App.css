@@ -3,10 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: inter;
+  
 }
 body {
   overflow-x: hidden;
   width: 100%;
+  background-color: #591E8C;
 }
 .main{
   width: 414px;
