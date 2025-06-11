@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: inter;
 }
+body {
+  overflow-x: hidden;
+}
 .main{
   width: 414px;
   height: 896px;
