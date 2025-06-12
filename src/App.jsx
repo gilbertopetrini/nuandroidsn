@@ -29,7 +29,7 @@ function BotaoOlho({ visivel, setVisivel }) {
 function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
-const [isEyeVisible, setIsEyeVisible] = useState(true);
+const [isEyeVisible, setIsEyeVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
