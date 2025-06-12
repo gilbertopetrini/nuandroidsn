@@ -170,7 +170,7 @@ body {
   align-items: center;
   padding: 20px;
   border-radius: 13px;
-  font-weight: 400;
+  font-weight: 300;
   justify-content: space-between;
 }
 .header2 p{
@@ -303,4 +303,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+}
+.click{
+  cursor: pointer;
 }

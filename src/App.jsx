@@ -88,7 +88,7 @@ function App() {
       <div className="preto1">
         <div>
           <p>Saldo em conta</p>
-          <p className="saldo">R$ 12.000,00</p>
+          <p className="saldo">R$ 16.240,00</p>
         </div>
         <div className="flecha">
           <MdKeyboardArrowRight />
@@ -129,7 +129,7 @@ function App() {
         </div>
         <div className='header2'>
           <p>
-            <strong>Aumente seu limite</strong> do cartão hoje com o Nu Limite Garantido
+             <strong>Aumente seu limite</strong> do cartão hoje com o Nu Limite Garantido
           </p>
           <img src={ccimg} className='ccimg' />
         </div>
