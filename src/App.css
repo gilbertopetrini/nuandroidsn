@@ -135,7 +135,7 @@ body {
   left: 6px;
   font-size: 14px;
   height: 20px;
-  width: 70px;
+  width: 65px;
   border-radius: 4px;
 }
 .preto3{
@@ -239,6 +239,15 @@ body {
   display: flex;
   align-items: center;
 
+}
+.sla{
+  display: flex;
+}
+.btn{
+  font-size: 22px;
+  color: white;
+  margin-right: 30px;
+  align-items: center;
 }
 .btnacessar{
   height: 35px;

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { VscEye } from "react-icons/vsc";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi2";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -15,10 +14,22 @@ import logo from './assets/tela11.png'; // imagem da splash screen
 import { RiArrowUpDownFill } from "react-icons/ri";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FiSmartphone } from "react-icons/fi";
+import { VscEye, VscEyeClosed } from "react-icons/vsc";
+
+function BotaoOlho({ visivel, setVisivel }) {
+    return (
+      <p className='btn' 
+        onClick={() => setVisivel(!visivel)}
+      >
+        {visivel ? <VscEye /> : <VscEyeClosed/>}
+      </p>
+    );
+  }
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+const [isEyeVisible, setIsEyeVisible] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -52,10 +63,12 @@ function App() {
     );
   }
 
+
+
   return (
     <div className="main">
       <div className='prin'>
-       <header class="menu">
+       <header class='menu'>
           <div className='sel'>
             <RiArrowUpDownFill/>
           </div>
@@ -74,8 +87,8 @@ function App() {
         <div className="roxo1"></div>
         <div className="roxo2">
           <img src={pfp} className="pfp" />
-          <div>
-            <VscEye className="icone" />
+          <div className='sla'>
+            <BotaoOlho visivel={isEyeVisible} setVisivel={setIsEyeVisible} />
             <HiOutlineQuestionMarkCircle className="icone" />
             <IoShieldCheckmark className="icone" />
           </div>
@@ -88,7 +101,7 @@ function App() {
       <div className="preto1">
         <div>
           <p>Saldo em conta</p>
-          <p className="saldo">R$ 16.240,00</p>
+          <p className="saldo">{isEyeVisible ? 'R$ 16.240,00' : '••••'}</p>
         </div>
         <div className="flecha">
           <MdKeyboardArrowRight />
@@ -106,7 +119,7 @@ function App() {
         </div>
         <div className='main1'>
           <div className='iconemain2'><LuHandCoins /></div>
-          <div className='emprestimo'>R$10.000</div>
+          <div className='emprestimo'>R${isEyeVisible ? '15.000' : '••••'}</div>
           <div className='textomain'>Pegar emprestado</div>
         </div>
         <div className='main1'>
@@ -142,8 +155,8 @@ function App() {
             <MdKeyboardArrowRight className='cartao2' />
           </div>
           <p className='p2'>Fatural Atual</p>
-          <p className='p3'>R$ 532,00</p>
-          <p className='p4'>Limite disponível de R$ 950,00</p>
+          <p className='p3'>R$ {isEyeVisible ? '532,00' : '••••'}</p>
+          <p className='p4'>Limite disponível de R$ {isEyeVisible ? '5.500,00' : '••••'}</p>
         </div>
       </div>
 
@@ -154,7 +167,7 @@ function App() {
             <MdKeyboardArrowRight className='cartao2' />
           </div>
           <p className='p2'>Valor disponível de até</p>
-          <p className='p3'>R$ 10.000,00</p>
+          <p className='p3'>R$ {isEyeVisible ? '15.000,00' : '••••'}</p>
         </div>
       </div>
 
