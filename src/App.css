@@ -8,7 +8,7 @@
 body {
   overflow-x: hidden;
   width: 100%;
-  background-color: #591E8C;
+  background-color: #8A05BE;
 }
 .main{
   width: 414px;
@@ -19,7 +19,7 @@ body {
   padding-top: env(safe-area-inset-top);
   width: 414px;
   height: 191px;
-  background-color: #591E8C;
+  background-color: #8A05BE;
 }
 .roxo1{
   width: 414px;
@@ -130,7 +130,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #591E8C;
+  background-color: #8A05BE;
   bottom: 50px;
   left: 6px;
   font-size: 14px;
@@ -243,7 +243,7 @@ body {
 .btnacessar{
   height: 35px;
   width: 80px;
-  background-color: #591E8C;
+  background-color: #8A05BE;
   border-radius: 15px;
   display: flex;
   justify-content: center;
