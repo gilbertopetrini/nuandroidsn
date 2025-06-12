@@ -273,7 +273,7 @@ body {
 }
 .menu{
   position: fixed;
-  bottom: 20px;
+  bottom: 35px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 30px;
@@ -294,6 +294,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+  color: #BA85F1;
 }
 .nsel{
   height: 55px;
