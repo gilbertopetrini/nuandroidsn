@@ -12,6 +12,9 @@ import { FaInbox, FaCreditCard, FaRegHeart } from "react-icons/fa6";
 import ccimg from './assets/ccimg.png';
 import pfp from './assets/pfp.png';
 import logo from './assets/tela11.png'; // imagem da splash screen
+import { RiArrowUpDownFill } from "react-icons/ri";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { FiSmartphone } from "react-icons/fi";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -51,6 +54,22 @@ function App() {
 
   return (
     <div className="main">
+      <div className='prin'>
+       <header class="menu">
+          <div className='sel'>
+            <RiArrowUpDownFill/>
+          </div>
+          <div className='nsel'>
+          <BsCurrencyDollar/>
+          </div>
+          <div className='nsel'>
+          <HiOutlineShoppingBag/>
+          </div>
+          <div className='nsel'>
+          <FiSmartphone/>
+          </div>
+        </header>
+      </div>
       <div className="roxocima">
         <div className="roxo1"></div>
         <div className="roxo2">

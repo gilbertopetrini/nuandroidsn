@@ -266,3 +266,40 @@ body {
   margin-right: 7px;
   color: #7931b8;
 }
+.prin{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.menu{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  height: 64px;
+  width: 266px;
+  background-color: black;
+  color: #A8A8A8;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+}
+.sel{
+  background-color: #32104C;
+  height: 55px;
+  width: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+.nsel{
+  height: 55px;
+  width: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
