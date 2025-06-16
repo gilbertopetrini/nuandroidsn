@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Nuu from './nubank';
+import Nuu from './Nubank';
 import Config from './Config';
 
 
