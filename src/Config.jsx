@@ -1,8 +1,58 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Config.css'
+import { messaging, getToken, onMessage } from './firebase';
 
 function Config() {
+
+  const [token, setToken] = useState(null);
+
+   useEffect(() => {
+    // Solicita permissão e pega o token
+    Notification.requestPermission().then((permission) => {
+      if (permission === 'granted') {
+        getToken(messaging, {
+          vapidKey: 'BE7vD_ovfFNfuojxY621XpzwehIG3eEeqryLfb6P_Ujgbxn07TcyGK8nuRTI_F1VrlRK_O3A_0XmmjXh0SXILDw'
+        }).then((currentToken) => {
+          if (currentToken) {
+            setToken(currentToken);
+            console.log('Token:', currentToken);
+          } else {
+            console.log('Sem token disponível');
+          }
+        }).catch((err) => {
+          console.error('Erro ao obter o token:', err);
+        });
+      }
+    });
+
+    // Quando uma notificação é recebida com a aba aberta
+    onMessage(messaging, (payload) => {
+      console.log('Mensagem recebida:', payload);
+      showNotification(payload.notification.title, payload.notification.body);
+    });
+  }, []);
+
+  // Função para mostrar a notificação local
+  const showNotification = (title, body) => {
+    if (Notification.permission === 'granted') {
+      navigator.serviceWorker.getRegistration().then((reg) => {
+        reg.showNotification(title, {
+          body: body,
+          icon: '/logo.png', // ícone opcional do Pix
+          vibrate: [200, 100, 200],
+          tag: 'pix-notification',
+          renotify: true
+        });
+      });
+    }
+  };
+
+  // Simula uma notificação de Pix
+  const simularPix = () => {
+    showNotification('Pix Recebido!', 'R$ 50,00 recebido de João Silva.');
+  };
+
   const [nome, setNome] = useState('');
   const [saldo, setSaldo] = useState('');
   const [emp, setEmp] = useState('');
@@ -60,6 +110,7 @@ function Config() {
         <input className='input' placeholder='Respeite a formatacão 0.000,00' value={limit} onChange={(e) => setLimit(e.target.value)} />
       </label>
       <button className='input' onClick={salvar}>Salvar e voltar</button>
+      <button className='input' onClick={simularPix}>pix</button>
     </div>
   );
 }
