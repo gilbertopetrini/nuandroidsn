@@ -1,0 +1,22 @@
+input::placeholder {
+  font-size: 11px;
+}
+.maic h2{
+  color: white;
+}
+.mainc label{
+  color: white;
+}
+
+.mainc{
+width: 414px;
+display: flex;
+flex-direction: column;
+gap: 40px;
+}
+.input{
+  width: 250px;
+  height: 60px;
+  font-size: 20px;
+  margin-left: 20px;
+}

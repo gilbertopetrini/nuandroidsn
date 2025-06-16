@@ -270,6 +270,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #b073e6;
+  cursor: pointer;
 }
 .heart{
   margin-right: 7px;
