@@ -90,7 +90,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(false);
   return (
     <div className="main">
       <div className='prin'>
-       <header class='menu'>
+       <header className='menuu'>
           <div className='sel'>
             <RiArrowUpDownFill/>
           </div>
