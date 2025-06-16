@@ -3,32 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './Config.css'
 import { messaging, getToken, onMessage } from './firebase';
 
+
 function Config() {
-
-  async function mostrarNotificacao() {
-    // Pede permissão para notificações
-    if (!("Notification" in window)) {
-      alert("Seu navegador não suporta notificações");
-      return;
-    }
-
-    if (Notification.permission === "granted") {
-      // Se já tem permissão, mostra a notificação
-      new Notification("Pix Recebido!", {
-        body: "R$ 55,00 recebido de João Silva.",
-        icon: "/logo.png" // URL do ícone Nubank ou algum similar
-      });
-    } else if (Notification.permission !== "denied") {
-      // Solicita permissão
-      const permission = await Notification.requestPermission();
-      if (permission === "granted") {
-        new Notification("Pix Recebido!", {
-          body: "R$ 55,00 recebido de João Silva.",
-          icon: "/logo.png"
-        });
-      }
-    }
-  }
 
   const [token, setToken] = useState(null);
 
@@ -136,7 +112,6 @@ function Config() {
       </label>
       <button className='input' onClick={salvar}>Salvar e voltar</button>
       <button className='input' onClick={simularPix}>pix</button>
-      <button className='input' onClick={mostrarNotificacao}>pix 2</button>
     </div>
   );
 }
