@@ -10,7 +10,7 @@ function App() {
     Notification.requestPermission().then((permission) => {
       if (permission === 'granted') {
         getToken(messaging, {
-          vapidKey: "BE7vD_ovFNFuokY621XpzwehG3eEqryLFb6P_Ugjbx07TycgK8nuRTl_F1VrIK_O3A_0XrmxjhXOSXlLDw"
+          vapidKey: "BE7vD_ovfFNfuojxY621XpzwehIG3eEeqryLfb6P_Ujgbxn07TcyGK8nuRTI_F1VrlRK_O3A_0XmmjXh0SXILDw"
         }).then((currentToken) => {
           if (currentToken) {
             console.log("Token do dispositivo:", currentToken);
@@ -29,7 +29,7 @@ function App() {
       alert(`${payload.notification.title}: ${payload.notification.body}`);
     });
   }, []);
-  
+
   return (
     <Routes>
       <Route path="/" element={<Nuu />} />
