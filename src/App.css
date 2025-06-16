@@ -9,6 +9,9 @@ body {
   overflow-x: hidden;
   width: 100%;
   background-color: #8A05BE;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 .main{
   width: 414px;
