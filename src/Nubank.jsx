@@ -163,7 +163,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(false);
           <div>Meus Cartões</div>
         </div>
         <div className='header2'>
-          <p>
+          <p onClick={() => navigate('/config')}>
              <strong>Aumente seu limite</strong> do cartão hoje com o Nu Limite Garantido
           </p>
           <img src={ccimg} className='ccimg' />
@@ -204,7 +204,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(false);
         </div>
       </div>
 
-      <a className='preto7' onClick={() => navigate('/config')}>
+      <a className='preto7' >
         <FaRegHeart className='heart' />
         Avalie esta tela
       </a>
