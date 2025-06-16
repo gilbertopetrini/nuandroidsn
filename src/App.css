@@ -5,6 +5,11 @@
   font-family: inter;
   
 }
+@supports (-webkit-touch-callout: none) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
 body::-webkit-scrollbar {
   display: none; /* Safari e Chrome */
 }
