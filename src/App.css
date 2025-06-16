@@ -5,6 +5,9 @@
   font-family: inter;
   
 }
+body::-webkit-scrollbar {
+  display: none; /* Safari e Chrome */
+}
 body {
   overflow-x: hidden;
   width: 100%;
