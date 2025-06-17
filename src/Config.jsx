@@ -7,6 +7,14 @@ import { messaging, getToken, onMessage } from './firebase';
 function Config() {
 
   const [token, setToken] = useState(null);
+  const [nome, setNome] = useState('');
+  const [saldo, setSaldo] = useState('');
+  const [emp, setEmp] = useState('');
+  const [fat, setFat] = useState('');
+  const [limit, setLimit] = useState('');
+  const [valorpix, setValorpix] = useState('');
+  const [nomepix, setNomepix] = useState('');
+  const navigate = useNavigate();
 
    useEffect(() => {
     // Solicita permissão e pega o token
@@ -51,15 +59,10 @@ function Config() {
 
   // Simula uma notificação de Pix
   const simularPix = () => {
-    showNotification('Pix Recebido!', 'R$ 50,00 recebido de João Silva.');
+    showNotification('Transferência recebida','Você recebeu uma transferência de R$ ' +valorpix+' de ' +nomepix);
   };
 
-  const [nome, setNome] = useState('');
-  const [saldo, setSaldo] = useState('');
-  const [emp, setEmp] = useState('');
-  const [fat, setFat] = useState('');
-  const [limit, setLimit] = useState('');
-  const navigate = useNavigate();
+  
 
   useEffect(() => {
     const nomeSalvo = localStorage.getItem('nome');
@@ -111,7 +114,19 @@ function Config() {
         <input className='input' placeholder='Respeite a formatacão 0.000,00' value={limit} onChange={(e) => setLimit(e.target.value)} />
       </label>
       <button className='input' onClick={salvar}>Salvar e voltar</button>
+
+      <label>
+        Valor pix: 
+        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={valorpix} onChange={(e) => setValorpix(e.target.value)} />
+      </label>
+      <label>
+        Nome pix: 
+        <input className='input' placeholder='Nome completo' value={nomepix} onChange={(e) => setNomepix(e.target.value)} />
+      </label>
+
       <button className='input' onClick={simularPix}>pix</button>
+
+      
     </div>
   );
 }
