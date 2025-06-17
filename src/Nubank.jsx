@@ -31,7 +31,7 @@ function Nuu() {
   const [showSplash, setShowSplash] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
   const navigate = useNavigate();
-const [isEyeVisible, setIsEyeVisible] = useState(false);
+const [isEyeVisible, setIsEyeVisible] = useState(true);
 
  const [nome, setNome] = useState('');
   const [saldo, setSaldo] = useState('');
