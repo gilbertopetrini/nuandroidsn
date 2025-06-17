@@ -59,7 +59,7 @@ function Config() {
 
   // Simula uma notificação de Pix
   const simularPix = () => {
-    showNotification('','Você recebeu uma transferência de R$ ' +valorpix+' de ' +nomepix);
+    showNotification('ㅤ','Você recebeu uma transferência de R$ ' +valorpix+' de ' +nomepix);
   };
 
   
