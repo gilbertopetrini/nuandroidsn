@@ -1,4 +1,4 @@
-import './Pix.css'
+import './pix.css'
 import { HiOutlineMicrophone } from "react-icons/hi";
 import { FaXmark } from "react-icons/fa6";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi2";
@@ -10,13 +10,13 @@ import { RiCurrencyLine } from "react-icons/ri";
 import { PiHandDeposit } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
 
-function App() {
+function Pix() {
      const navigate = useNavigate();
   return (
     <>
         <div className='menudecima' >
             <div onClick={() => navigate('/')}>
-            <   FaXmark/ >
+            <FaXmark />
             </div>
             <div>
                 <HiOutlineQuestionMarkCircle/>
@@ -78,4 +78,4 @@ function App() {
   );
 }
 
-export default App;
+export default Pix;
