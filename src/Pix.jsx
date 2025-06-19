@@ -18,7 +18,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 function Pix() {
      const navigate = useNavigate();
   return (
-    <>
+    <div className='bodi'>
         <div className='menudecima' >
             <div onClick={() => navigate('/')}>
             <FaXmark />
@@ -111,7 +111,7 @@ function Pix() {
                 <MdKeyboardArrowRight/>
             </div>
         </div>
-    </>
+    </div>
   );
 }
 

@@ -13,10 +13,10 @@
 body::-webkit-scrollbar {
   display: none; /* Safari e Chrome */
 }
-body {
+.bodi {
   overflow-x: hidden;
   width: 100%;
-  background-color: #8A05BE;
+  background-color: #000000;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   scrollbar-width: none;
