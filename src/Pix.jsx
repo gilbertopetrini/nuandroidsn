@@ -9,6 +9,11 @@ import { FiCopy } from "react-icons/fi";
 import { RiCurrencyLine } from "react-icons/ri";
 import { PiHandDeposit } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
+import { IoSparklesSharp } from "react-icons/io5";
+import { MdCurrencyExchange } from "react-icons/md";
+import { MdOutlineShield } from "react-icons/md";
+import { HiMiniAdjustmentsVertical } from "react-icons/hi2";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 function Pix() {
      const navigate = useNavigate();
@@ -72,6 +77,38 @@ function Pix() {
                     <div className='iconemainpix'><HiOutlineMicrophone/></div>
                     <div className='textodoicone'>Pix por voz</div>
                 </div>
+            </div>
+        </div>
+        <div className='mainpix3'>
+            <div className='pixnocred'>
+                <p><strong>Pix no crédito:</strong> transfira até R$ 350 sem usar o saldo da sua conta.</p>
+                <p className='pnc'><IoSparklesSharp/></p>
+            </div>
+        </div>
+        <div className='mainpix4'>
+            <p>Preferências</p>
+            <div className='pref'>
+                <div className='pref2'>
+                    <MdCurrencyExchange/>
+                    <p>Pix automático</p>
+                </div>
+                <MdKeyboardArrowRight/>
+            </div>
+
+            <div className='pref'>
+                <div className='pref2'>
+                    <MdOutlineShield/>
+                    <p>Registrar ou trazer chaves</p>
+                </div>
+                <MdKeyboardArrowRight/>
+            </div>
+
+            <div className='pref'>
+                <div className='pref2'>
+                    <HiMiniAdjustmentsVertical/>
+                    <p>Meus limites</p>
+                </div>
+                <MdKeyboardArrowRight/>
             </div>
         </div>
     </>
