@@ -53,16 +53,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
   }, []);
 
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFadeOut(true);
-      setTimeout(() => {
-        setShowSplash(false);
-      }, 1000);
-    }, 3000);
 
-    return () => clearTimeout(timer);
-  }, []);
 
   if (showSplash) {
     return (
@@ -131,7 +122,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
       </div>
 
       <div className="preto2">
-        <div className='main1' onClick={() => navigate('/Pix')}>
+        <div className='main1' >
           <div className='iconemain'><PiPixLogoLight /></div>
           <div className='textomain'>Área Pix e transferir</div>
         </div>
