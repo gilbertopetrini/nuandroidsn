@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Config.css'
-import { messaging, getToken, onMessage } from './firebase';
 
 
 function Config() {
@@ -16,31 +15,6 @@ function Config() {
   const [nomepix, setNomepix] = useState('');
   const navigate = useNavigate();
 
-   useEffect(() => {
-    // Solicita permissão e pega o token
-    Notification.requestPermission().then((permission) => {
-      if (permission === 'granted') {
-        getToken(messaging, {
-          vapidKey: 'BE7vD_ovfFNfuojxY621XpzwehIG3eEeqryLfb6P_Ujgbxn07TcyGK8nuRTI_F1VrlRK_O3A_0XmmjXh0SXILDw'
-        }).then((currentToken) => {
-          if (currentToken) {
-            setToken(currentToken);
-            console.log('Token:', currentToken);
-          } else {
-            console.log('Sem token disponível');
-          }
-        }).catch((err) => {
-          console.error('Erro ao obter o token:', err);
-        });
-      }
-    });
-
-    // Quando uma notificação é recebida com a aba aberta
-    onMessage(messaging, (payload) => {
-      console.log('Mensagem recebida:', payload);
-      showNotification(payload.notification.title, payload.notification.body);
-    });
-  }, []);
 
   // Função para mostrar a notificação local
   const showNotification = (title, body) => {
