@@ -131,7 +131,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
       </div>
 
       <div className="preto2">
-        <div className='main1'>
+        <div className='main1' onClick={() => navigate('/Pix')}>
           <div className='iconemain'><PiPixLogoLight /></div>
           <div className='textomain'>Área Pix e transferir</div>
         </div>
