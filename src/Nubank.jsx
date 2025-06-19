@@ -72,7 +72,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
         </header>
       </div>
       <div className="roxocima">
-        <div className="roxo1"></div>
+        
         <div className="roxo2">
           <img src={pfp} className="pfp" />
           <div className='sla'>
