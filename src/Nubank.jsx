@@ -53,31 +53,6 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
   }, []);
 
 
-
-
-  if (showSplash) {
-    return (
-      <div style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundColor: '#8A05BE',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        opacity: fadeOut ? 0 : 1,
-        transition: 'opacity 1s ease',
-        zIndex: 9999,
-      }}>
-        <img src={logo} alt="Logo" style={{ width: '150px' }} />
-      </div>
-    );
-  }
-
-
-
   return (
     <div className="main">
       <div className='prin'>
