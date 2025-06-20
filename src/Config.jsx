@@ -80,7 +80,7 @@ function Config() {
     <div className='mainc' style={{ padding: '20px' }}>
       <h2>Configurar Interface</h2>
       <label>
-          Foto de perfil:
+          Foto de perfil :
         <input type="file" accept="image/*" onChange={handleFotoChange} />
       </label>
       <label>
