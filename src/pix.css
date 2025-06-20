@@ -10,9 +10,13 @@
     display: none;
   }
 }
-body::-webkit-scrollbar {
+.bodi::-webkit-scrollbar {
   display: none; /* Safari e Chrome */
+  overflow-y: scroll;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;
 }
+
 .bodi {
   overflow-x: hidden;
   width: 100%;
