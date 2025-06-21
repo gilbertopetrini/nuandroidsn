@@ -35,18 +35,24 @@ const hasPulled = useRef(false);
 
 useEffect(() => {
   const handleTouchStart = (e) => {
-    if (window.scrollY === 10) {
+    if (window.scrollY === 0) {
       startY.current = e.touches[0].clientY;
       hasPulled.current = false;
-      e.preventDefault();
     }
   };
 
   const handleTouchMove = (e) => {
-    const distance = e.touches[0].clientY - startY.current;
-    if (distance > 50 && window.scrollTop === 0) {
-      hasPulled.current = true;
-      setShowRefresh(true);
+    const currentY = e.touches[0].clientY;
+    const distance = currentY - startY.current;
+
+    // Procede apenas se estiver no topo e puxando para baixo
+    if (window.scrollY === 0 && distance > 0) {
+      // Previne o comportamento padrão para parar a rolagem nativa ao puxar para atualizar
+      e.preventDefault();
+      if (distance > 50 && !hasPulled.current) { // Garante que só acione uma vez por puxada
+        hasPulled.current = true;
+        setShowRefresh(true);
+      }
     }
   };
 
@@ -58,10 +64,10 @@ useEffect(() => {
     }
   };
 
+  // Adicione passive: false ao touchmove para permitir preventDefault
   window.addEventListener('touchstart', handleTouchStart);
   window.addEventListener('touchmove', handleTouchMove, { passive: false });
   window.addEventListener('touchend', handleTouchEnd);
-  
 
   return () => {
     window.removeEventListener('touchstart', handleTouchStart);
