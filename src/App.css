@@ -22,19 +22,24 @@ body {
   scrollbar-width: none;
   
 }
+.gif{
+  height: 35px;
+  width: 35px;
+  margin-top: 18px;
+}
 .pull-refresh {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
-  background-color: white;
+  height: 70px;
+  background-color: #591E8C;
   text-align: center;
   line-height: 50px;
   font-size: 14px;
   color: gray;
   transform: translateY(-100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
   z-index: 1000;
 }
 .pull-refresh.show {

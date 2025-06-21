@@ -10,6 +10,7 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { FaInbox, FaCreditCard, FaRegHeart } from "react-icons/fa6";
 import ccimg from './assets/ccimg.png';
 import pfp from './assets/pfp.png';
+import reload from './assets/reload.gif';
 import logo from './assets/tela11.png'; // imagem da splash screen
 import { RiArrowUpDownFill } from "react-icons/ri";
 import { HiOutlineShoppingBag } from "react-icons/hi";
@@ -110,7 +111,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
   return (
     <div className="main">
       <div className={`pull-refresh ${showRefresh ? 'show' : ''}`}>
-        🔄 Atualizando...
+        <img className="gif" src={reload}/>
       </div>
       <div className='prin'>
        <header className='menuu'>
