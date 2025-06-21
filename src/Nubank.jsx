@@ -35,7 +35,7 @@ const hasPulled = useRef(false);
 
 useEffect(() => {
   const handleTouchStart = (e) => {
-    if (window.scrollY === 100) {
+    if (window.scrollY === 10) {
       startY.current = e.touches[0].clientY;
       hasPulled.current = false;
       e.preventDefault();
