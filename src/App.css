@@ -22,6 +22,12 @@ body {
   overflow-y: auto;
   scrollbar-width: none;
 }
+.main::after {
+  content: '';
+  display: block;
+  height: 10px;
+  margin-bottom: -10px;
+}
 .gif{
   height: 35px;
   width: 35px;
