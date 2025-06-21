@@ -21,13 +21,10 @@ body {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   scrollbar-width: none;
+  overscroll-behavior: contain; /* ou 'none' se quiser um bloqueio mais forte */
 }
-.main::after {
-  content: '';
-  display: block;
-  height: 10px;
-  margin-bottom: -10px;
-}
+
+
 .gif{
   height: 35px;
   width: 35px;
@@ -70,6 +67,7 @@ body {
   width: 414px;
   height: 896px;
   padding-top: env(safe-area-inset-top);
+  overscroll-behavior: contain;
   
 }
 .roxocima{

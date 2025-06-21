@@ -8,7 +8,7 @@
 body {
   overflow-x: hidden;
   width: 100%;
-  overscroll-behavior: contain;
+  overscroll-behavior: none;
   overflow-y: auto;
 }
 
