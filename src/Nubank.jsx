@@ -112,7 +112,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
 
   const [fotoPerfil, setFotoPerfil] = useState('');
 
-  useEffect(() => {n
+  useEffect(() => {
     const foto = localStorage.getItem('fotoPerfil');
   setFotoPerfil(foto || '/pfp.png');  // ou '/pfp.png' conforme sua pasta
 }, []);
