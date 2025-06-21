@@ -17,11 +17,11 @@ body::-webkit-scrollbar {
 body {
   overflow-x: hidden;
   width: 100%;
-  background: linear-gradient(to bottom, #591E8C 50%, black 50%);
-  height: 1360px;
+  height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   scrollbar-width: none;
+  background: linear-gradient(to bottom, #591E8C 50%, black 50%);
 }
 .gif{
   height: 35px;
@@ -63,9 +63,8 @@ body {
 }
 .main{
   width: 414px;
-  height: 896px;
+  height: 100%;
   padding-top: env(safe-area-inset-top);
-  
 }
 .roxocima{
   padding-top: env(safe-area-inset-top);
