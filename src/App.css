@@ -17,7 +17,8 @@ body::-webkit-scrollbar {
 body {
   overflow-x: hidden;
   width: 100%;
-  background-color: #591E8C;
+  background: linear-gradient(to bottom, #591E8C 50%, black 50%);
+  height: 1160px;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   scrollbar-width: none;
@@ -64,6 +65,7 @@ body {
   width: 414px;
   height: 896px;
   padding-top: env(safe-area-inset-top);
+  
 }
 .roxocima{
   padding-top: env(safe-area-inset-top);
