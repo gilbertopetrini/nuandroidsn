@@ -10,8 +10,7 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { FaInbox, FaCreditCard, FaRegHeart } from "react-icons/fa6";
 import ccimg from './assets/ccimg.png';
 import pfp from './assets/pfp.png';
-import reload from './assets/reload.gif';
-import logo from './assets/tela11.png'; // imagem da splash screen
+import reload from './assets/reload.gif'; 
 import { RiArrowUpDownFill } from "react-icons/ri";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FiSmartphone } from "react-icons/fi";
@@ -35,7 +34,6 @@ function Nuu() {
   const hasPulled = useRef(false);
   const [showBlackFlash, setShowBlackFlash] = useState(false);
 
-  
 
   useEffect(() => {
     const handleTouchStart = (e) => {
@@ -86,8 +84,6 @@ function Nuu() {
   };
 }, []);
 
-  const [showSplash, setShowSplash] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
   const navigate = useNavigate();
 const [isEyeVisible, setIsEyeVisible] = useState(true);
 

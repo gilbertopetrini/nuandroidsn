@@ -12,6 +12,46 @@
     display: none;
   }
 }
+.splash-screen {
+  position: fixed; /* Fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Largura total da viewport */
+  height: 100vh; /* Altura total da viewport */
+  background-color: #000; /* Fundo preto, ou a cor que preferir */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 10000; /* Garante que fique acima de tudo */
+  opacity: 1; /* Começa visível */
+  transition: opacity 1s ease-out; /* Transição suave para desaparecer */
+}
+
+/* Classe para quando a splash screen deve desaparecer */
+.splash-screen.fade-out {
+  opacity: 0; /* Desaparece */
+  pointer-events: none; /* Impede cliques e interações depois de desaparecer */
+}
+
+/* Animação para a logo */
+.splash-logo {
+  width: 150px; /* Tamanho da sua logo */
+  height: auto;
+  opacity: 0; /* Começa invisível */
+  transform: scale(0.8); /* Começa um pouco menor */
+  animation: logo-fade-in 1s forwards ease-out; /* Animação: 1s, permanece no estado final, suave */
+}
+
+@keyframes logo-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 body::-webkit-scrollbar {
   display: none; /* Safari e Chrome */
 }
