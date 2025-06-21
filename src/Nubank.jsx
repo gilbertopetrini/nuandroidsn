@@ -44,7 +44,7 @@ useEffect(() => {
 
   const handleTouchMove = (e) => {
     const distance = e.touches[0].clientY - startY.current;
-    if (distance > 50 && window.scrollY === 0) {
+    if (distance > 50 && window.scrollTop === 0) {
       hasPulled.current = true;
       setShowRefresh(true);
     }
