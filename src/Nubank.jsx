@@ -31,16 +31,19 @@ function BotaoOlho({ visivel, setVisivel }) {
 
 function Nuu() {
   const [showRefresh, setShowRefresh] = useState(false);
-const startY = useRef(0);
-const hasPulled = useRef(false);
+  const startY = useRef(0);
+  const hasPulled = useRef(false);
+  const [showBlackFlash, setShowBlackFlash] = useState(false);
 
-useEffect(() => {
-  const handleTouchStart = (e) => {
-    if (window.scrollY === 0) {
-      startY.current = e.touches[0].clientY;
-      hasPulled.current = false;
-    }
-  };
+  
+
+  useEffect(() => {
+    const handleTouchStart = (e) => {
+      if (window.scrollY === 0) {
+        startY.current = e.touches[0].clientY;
+        hasPulled.current = false;
+      }
+    };
 
   const handleTouchMove = (e) => {
     const currentY = e.touches[0].clientY;
@@ -59,11 +62,17 @@ useEffect(() => {
 
   const handleTouchEnd = () => {
     if (hasPulled.current) {
+      setShowBlackFlash(true);
       setTimeout(() => {
         setShowRefresh(false);
-      }, 1000); // tempo da "falsa atualização"
+      }, 1200); // tempo da "falsa atualização"
+      setTimeout(() => {
+        setShowBlackFlash(false);
+      }, 120);
     }
   };
+
+  
 
   // Adicione passive: false ao touchmove para permitir preventDefault
   window.addEventListener('touchstart', handleTouchStart);
@@ -110,6 +119,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
 
   return (
     <div className="main">
+      <div className={`flash-overlay ${showBlackFlash ? 'show-flash' : ''}`}></div>
       <div className={`pull-refresh ${showRefresh ? 'show' : ''}`}>
         <img className="gif" src={reload}/>
       </div>

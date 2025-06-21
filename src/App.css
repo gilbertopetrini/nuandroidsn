@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +21,6 @@ body {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   scrollbar-width: none;
-  
 }
 .gif{
   height: 35px;
@@ -44,6 +44,21 @@ body {
 }
 .pull-refresh.show {
   transform: translateY(0);
+}
+.flash-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0; /* Começa invisível */
+  z-index: 9999; /* Garante que fique por cima de tudo */
+  pointer-events: none; /* Permite interagir com elementos por baixo quando invisível */
+}
+
+.flash-overlay.show-flash {
+  opacity: 1; /* Fica visível (preto) */
 }
 .main{
   width: 414px;
