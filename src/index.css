@@ -21,3 +21,10 @@ body {
   background-color: rgba(245, 222, 179, 0) !important;
 
 }
+html, body {
+  background-color: #000; /* ou o fundo do seu app */
+  overscroll-behavior: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
