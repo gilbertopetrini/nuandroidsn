@@ -16,6 +16,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FiSmartphone } from "react-icons/fi";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
 
 function BotaoOlho({ visivel, setVisivel }) {
     return (
@@ -28,6 +29,45 @@ function BotaoOlho({ visivel, setVisivel }) {
   }
 
 function Nuu() {
+  const [showRefresh, setShowRefresh] = useState(false);
+const startY = useRef(0);
+const hasPulled = useRef(false);
+
+useEffect(() => {
+  const handleTouchStart = (e) => {
+    if (window.scrollY === 0) {
+      startY.current = e.touches[0].clientY;
+      hasPulled.current = false;
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    const distance = e.touches[0].clientY - startY.current;
+    if (distance > 50 && window.scrollY === 0) {
+      hasPulled.current = true;
+      setShowRefresh(true);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (hasPulled.current) {
+      setTimeout(() => {
+        setShowRefresh(false);
+      }, 1000); // tempo da "falsa atualização"
+    }
+  };
+
+  window.addEventListener('touchstart', handleTouchStart);
+  window.addEventListener('touchmove', handleTouchMove);
+  window.addEventListener('touchend', handleTouchEnd);
+
+  return () => {
+    window.removeEventListener('touchstart', handleTouchStart);
+    window.removeEventListener('touchmove', handleTouchMove);
+    window.removeEventListener('touchend', handleTouchEnd);
+  };
+}, []);
+
   const [showSplash, setShowSplash] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
   const navigate = useNavigate();
@@ -61,6 +101,9 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
 
   return (
     <div className="main">
+      <div className={`pull-refresh ${showRefresh ? 'show' : ''}`}>
+        🔄 Atualizando...
+      </div>
       <div className='prin'>
        <header className='menuu'>
           <div className='sel'>
