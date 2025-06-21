@@ -58,8 +58,9 @@ useEffect(() => {
   };
 
   window.addEventListener('touchstart', handleTouchStart);
-  window.addEventListener('touchmove', handleTouchMove);
+  window.addEventListener('touchmove', handleTouchMove, { passive: false });
   window.addEventListener('touchend', handleTouchEnd);
+  
 
   return () => {
     window.removeEventListener('touchstart', handleTouchStart);
