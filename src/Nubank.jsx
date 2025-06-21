@@ -52,6 +52,12 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
     if (limitSalvo) setLimit(limitSalvo);
   }, []);
 
+  const [fotoPerfil, setFotoPerfil] = useState('');
+
+  useEffect(() => {
+    const foto = localStorage.getItem('fotoPerfil');
+  setFotoPerfil(foto || '/pfp.png');  // ou '/pfp.png' conforme sua pasta
+}, []);
 
   return (
     <div className="main">
@@ -74,7 +80,10 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
       <div className="roxocima">
         
         <div className="roxo2">
-          <img src={pfp} className="pfp" />
+          <div>
+            <div className='bolia'></div>
+            <img src={fotoPerfil} className="pfp" alt="Foto de perfil" />
+          </div> 
           <div className='sla'>
             <BotaoOlho visivel={isEyeVisible} setVisivel={setIsEyeVisible} />
             <HiOutlineQuestionMarkCircle className="icone" />

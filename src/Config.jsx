@@ -14,8 +14,18 @@ function Config() {
   const [valorpix, setValorpix] = useState('');
   const [nomepix, setNomepix] = useState('');
   const navigate = useNavigate();
+  const [fotoPerfil, setFotoPerfil] = useState('');
 
-
+  const handleFotoChange = (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setFotoPerfil(reader.result);
+    };
+    reader.readAsDataURL(file);
+  }
+  };
   // Função para mostrar a notificação local
   const showNotification = (title, body) => {
     if (Notification.permission === 'granted') {
@@ -39,6 +49,7 @@ function Config() {
   
 
   useEffect(() => {
+
     const nomeSalvo = localStorage.getItem('nome');
     const saldoSalvo = localStorage.getItem('saldo');
     const empSalvo = localStorage.getItem('emp');
@@ -49,6 +60,9 @@ function Config() {
     if (empSalvo) setEmp(empSalvo);
     if (fatSalvo) setFat(fatSalvo);
     if (limitSalvo) setLimit(limitSalvo);
+
+    const fotoSalva = localStorage.getItem('fotoPerfil');
+    if (fotoSalva) setFotoPerfil(fotoSalva);
   }, []);
 
   const salvar = () => {
@@ -56,13 +70,19 @@ function Config() {
     localStorage.setItem('saldo', saldo);
     localStorage.setItem('emp', emp);
     localStorage.setItem('fat', fat);
-    localStorage.setItem('limit', limit);
+    localStorage.setItem('limit', limit)
+    localStorage.setItem('fotoPerfil', fotoPerfil);
+
     navigate('/');
   };
 
   return (
     <div className='mainc' style={{ padding: '20px' }}>
       <h2>Configurar Interface</h2>
+      <label>
+          Foto de perfil :
+        <input type="file" accept="image/*" onChange={handleFotoChange} />
+      </label>
       <label>
         Nome: 
         <input className='input' placeholder='Somente o primeiro' value={nome} onChange={(e) => setNome(e.target.value)} />
