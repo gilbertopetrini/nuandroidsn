@@ -23,6 +23,7 @@ body {
   overflow-y: auto;
   scrollbar-width: none;
   overscroll-behavior: contain; /* ou 'none' se quiser um bloqueio mais forte */
+  background-color: #591E8C;
 }
 
 

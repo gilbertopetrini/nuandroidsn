@@ -23,10 +23,3 @@ body {
 ::-webkit-scrollbar-thumb {
   background: transparent;
 }
-html, body {
-  background-color: #591E8C; /* ou o fundo do seu app */
-  overscroll-behavior: none;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
