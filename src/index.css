@@ -23,3 +23,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background: transparent;
 }
+html{
+  background-color: #591E8C;
+}
