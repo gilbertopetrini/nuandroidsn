@@ -2,6 +2,7 @@ import Nuu from './Nubank';
 import Config from './Config';
 import Pix from './Pix';
 import Saldo from './saldo';
+import Transferir from './transferir';
 import './Ape.css'
 import { useState, useEffect } from "react";
 import logo from './assets/tela11.png';
@@ -50,6 +51,7 @@ if (showSplash) {
         <Route path="/config" element={<Config />} />
         <Route path="/pix" element={<Pix />} />
         <Route path="/saldo" element={<Saldo />} />
+        <Route path="/transferir" element={<Transferir />} />
       </Routes>
     </AnimatePresence>
   );

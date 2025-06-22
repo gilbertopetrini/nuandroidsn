@@ -1,0 +1,60 @@
+
+.mainTransferir{
+    width: 414px;
+    height: fit-content;
+    background-color: black;
+    color: white;
+}
+.trans1{
+    padding: 0 25px;
+}
+.line0{
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+.line{
+    display: flex;
+    margin-bottom: 5px;
+}
+.line2{
+    color: #A6A6A6;
+    margin-right: 7px;
+}
+.menutrans{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    color: #A6A6A6;
+}
+.inserir{
+    width: 414px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.inseririnput{
+    width: 330px;
+    height: 36px;
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid #232323;
+    color: white;
+    padding-left: 10px;
+    font-size: 28px;
+    outline: none;
+}
+.inserir p{
+    border-bottom: 2px solid #232323;
+    font-size: 28px;
+}
+.fim{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    color: #BC8AFB;
+    font-size: 16px;
+    margin-top: 25px;
+}
+.fimicon{
+    font-size: 22px;
+}
