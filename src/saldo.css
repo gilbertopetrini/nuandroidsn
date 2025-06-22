@@ -4,7 +4,7 @@
   width: 35px;
   margin-top: 18px;
 }
-.pull-refresh {
+.pull-refresh2 {
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
   transition: transform 0.1s ease;
   z-index: 1000;
 }
-.pull-refresh.show {
+.pull-refresh2.show {
   transform: translateY(0);
 }
 .flash-overlay {

@@ -133,7 +133,7 @@ function Saldo() {
         >  
     <div className="mainSaldo">
         <div className={`flash-overlay ${showBlackFlash ? 'show-flash' : ''}`}></div>
-          <div className={`pull-refresh ${showRefresh ? 'show' : ''}`}>
+          <div className={`pull-refresh2 ${showRefresh ? 'show' : ''}`}>
             <img className="gif" src={reload}/>
           </div>
         <div className="barra1" onClick={() => navigate('/')}>
