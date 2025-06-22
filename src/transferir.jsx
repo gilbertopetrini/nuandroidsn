@@ -16,6 +16,35 @@ const pageVariants = {
 function Transferir() {
 
     const inputRef = useRef(null);
+    const navigate = useNavigate();
+
+    const [valorTransferencia, setValorTransferencia] = useState('');
+
+     const formatMoneyInput = (value) => {
+        // Remove todos os caracteres não-dígitos
+        const cleanValue = value.replace(/\D/g, '');
+
+        // Se estiver vazio, retorna string vazia
+        if (!cleanValue) {
+            return '';
+        }
+
+        // Converte para número, divide por 100 para obter as casas decimais
+        // Usamos parseInt para evitar problemas com floats se cleanValue for muito grande
+        const numberValue = parseInt(cleanValue, 10) / 100;
+
+        // Formata usando Intl.NumberFormat para o locale pt-BR
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'decimal',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        }).format(numberValue);
+    };
+
+    // Handler para a mudança do input de valor de transferência
+    const handleValorTransferenciaChange = (e) => {
+        setValorTransferencia(formatMoneyInput(e.target.value));
+    };
 
     useEffect(() => {
         const input = inputRef.current;
@@ -24,7 +53,6 @@ function Transferir() {
         }
     }, []);
     
-    const navigate = useNavigate();
 
     useEffect(() => {
     // Aplica o estilo ao body quando a página monta
@@ -86,7 +114,13 @@ function Transferir() {
         </div>
         <div className="inserir">
             <p>R$</p>
-            <input ref={inputRef} inputMode="numeric" className="inseririnput"></input>
+            <input ref={inputRef}
+                        inputMode="numeric"
+                        className="inseririnput"
+                        value={valorTransferencia} // Conecta o input ao estado
+                        onChange={handleValorTransferenciaChange} // Usa o handler de formatação
+                        placeholder="0,00" // Adiciona um placeholder para guiar o usuário
+                    />
         </div>
         <div className="fim">
             <p>Consultar meus limites pix</p>

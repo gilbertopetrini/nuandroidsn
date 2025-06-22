@@ -11,6 +11,7 @@
 .line0{
     font-size: 27px;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 .line{
     display: flex;
@@ -31,7 +32,9 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    font-weight: 500;
 }
+
 .inseririnput{
     width: 330px;
     height: 36px;
@@ -42,6 +45,12 @@
     padding-left: 10px;
     font-size: 28px;
     outline: none;
+    font-weight: 500;
+}
+.inseririnput::placeholder {
+    font-weight: 500;
+    color: white;
+    font-size: 28px;
 }
 .inserir p{
     border-bottom: 2px solid #232323;

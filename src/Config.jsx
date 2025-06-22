@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './Config.css'
 
 function Config() {
-  const [token, setToken] = useState(null);
   const [nome, setNome] = useState('');
   const [saldo, setSaldo] = useState('');
   const [emp, setEmp] = useState('');
