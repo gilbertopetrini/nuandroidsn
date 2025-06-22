@@ -1,4 +1,19 @@
-
+.menuvert{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+.menuverticon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: #222222;
+    margin-bottom: 20px;
+}
 .mainTransferir{
     width: 414px;
     height: fit-content;
@@ -26,6 +41,7 @@
     justify-content: space-between;
     padding: 25px;
     color: #A6A6A6;
+    font-size: 20px;
 }
 .inserir{
     width: 414px;

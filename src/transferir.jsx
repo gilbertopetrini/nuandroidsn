@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { FaXmark } from "react-icons/fa6";
 import { MdQrCode } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { HiOutlineMicrophone } from "react-icons/hi";
 
 const pageVariants = {
   initial: { opacity: 1, x: 100 },
@@ -102,6 +103,10 @@ function Transferir() {
     >  
 
     <div className="mainTransferir">
+        <div className="menuvert">
+            <div className="menuverticon"><HiOutlineMicrophone /></div>
+            <div className="menuverticon"><MdKeyboardArrowRight /></div>
+        </div>
         <div className="menutrans"onClick={() => navigate('/Pix ')}><FaXmark /> <MdQrCode /></div>
         <div className="trans1">
             <p className="line0">Qual é o valor da <br/>transferência?</p>
