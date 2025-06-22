@@ -4,7 +4,6 @@ import './Config.css'
 
 
 function Config() {
-
   const [token, setToken] = useState(null);
   const [nome, setNome] = useState('');
   const [saldo, setSaldo] = useState('');
@@ -17,6 +16,12 @@ function Config() {
   const [fotoPerfil, setFotoPerfil] = useState('');
   const [invest, setInvest] = useState('');
   const [rendido, setRendido] = useState('');
+
+  const removerFoto = () => {
+    localStorage.removeItem('fotoPerfil');
+    setFotoPerfil('');
+    alert("Foto removida com sucesso.")
+  };  
 
   const handleFotoChange = (e) => {
   const file = e.target.files[0];
@@ -47,8 +52,6 @@ function Config() {
   const simularPix = () => {
     showNotification('Transferência recebida','Você recebeu uma transferência de R$ ' +valorpix+' de ' +nomepix);
   };
-
-  
 
   useEffect(() => {
 
@@ -91,6 +94,8 @@ function Config() {
           Foto de perfil :
         <input type="file" accept="image/*" onChange={handleFotoChange} />
       </label>
+      <button className='input' onClick={removerFoto}>Remover</button>
+
       <label>
         Nome: 
         <input className='input' placeholder='Somente o primeiro' value={nome} onChange={(e) => setNome(e.target.value)} />
