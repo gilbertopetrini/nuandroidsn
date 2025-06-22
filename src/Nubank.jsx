@@ -50,7 +50,6 @@ function Nuu() {
       if (window.scrollY === 0) {
         startY.current = e.touches[0].clientY;
         hasPulled.current = false;
-        document.body.style.overflow = 'hidden';
       }
     };
 
@@ -80,7 +79,6 @@ function Nuu() {
         setShowBlackFlash(false);
       }, 120);
     }
-    document.body.style.overflow = 'auto';
   };
 
   
