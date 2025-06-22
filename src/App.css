@@ -23,7 +23,6 @@ body {
   overflow-y: auto;
   scrollbar-width: none;
   overscroll-behavior: contain; /* ou 'none' se quiser um bloqueio mais forte */
-  background-color: #591E8C;
 }
 
 
@@ -70,6 +69,7 @@ body {
   height: 896px;
   padding-top: env(safe-area-inset-top);
   overscroll-behavior: contain;
+  background-color: #591E8C;
   
 }
 .roxocima{
