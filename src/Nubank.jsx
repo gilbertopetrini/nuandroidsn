@@ -35,6 +35,15 @@ function Nuu() {
   const hasPulled = useRef(false);
   const [showBlackFlash, setShowBlackFlash] = useState(false);
 
+  useEffect(() => {
+    // Aplica o estilo ao body quando a página monta
+    document.body.style.backgroundColor = '#591E8C;';
+
+    // Limpa ao sair da página
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
 
   useEffect(() => {
     const handleTouchStart = (e) => {
