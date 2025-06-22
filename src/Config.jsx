@@ -224,16 +224,16 @@ function Config() {
 
       <label>
         Valor pix: 
-        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={valorpix} onChange={(e) => setValorpix(e.target.value)} />
-      </label>
-      <label>
-        Nome pix: 
         <input
           className='input'
           value={valorpix}
           onChange={handleValorpixChange} // Usa o novo handler
           inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
-        />
+        />  
+      </label>
+      <label>
+        Nome pix: 
+        <input className='input' placeholder='Nome completo' value={nomepix} onChange={(e) => setNomepix(e.target.value)} />
       </label>
 
       <button className='input' onClick={simularPix}>pix</button>
