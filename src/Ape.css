@@ -11,7 +11,7 @@
   width: 100%;
 }
 .splash-logo {
-  width: 120px;
+  width: 100px;
   height: auto;
   position: absolute;
   z-index: 1001;
@@ -23,7 +23,7 @@
   height: auto;
   position: absolute;
   z-index: 9999;
-  top: 330px;
+  top: 320px;
 }
 
 /* Animações */
