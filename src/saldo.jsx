@@ -9,6 +9,15 @@ import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import { useState, useEffect } from 'react'
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { LiaMoneyBillSolid } from "react-icons/lia";
+import { PiHandDeposit } from "react-icons/pi";
+import { LiaBarcodeSolid } from "react-icons/lia";
+import { RiLoopRightLine } from "react-icons/ri";
+import { LuHandCoins } from "react-icons/lu";
+import { PiCoinVerticalLight } from "react-icons/pi";
+import { FaArrowUpFromBracket } from "react-icons/fa6";
+import { FaSignal } from "react-icons/fa";
+import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
 function Saldo() {
     const navigate = useNavigate();
@@ -90,13 +99,64 @@ function Saldo() {
                     <p>Total em investimentos</p>
                     <p>R$ {invest}</p>
                     <div className="rend">
-                        <FiArrowUp/> <p>{rendido}</p>
+                        <FiArrowUp/> <p>R$ {rendido}</p>
                     </div>
                 </div>
             </div>
             <div className="dir">
+                <div className="novidade">
+                    Novidade
+                </div>
                 <MdKeyboardArrowRight/>
             </div>
+        </div>
+        <div className="options">
+            <div className='optionsmain'>
+                <div className='optionsicone'><PiHandDeposit /></div>
+                <div className='optionstexto'>Depositar</div>
+            </div>
+
+            <div className='optionsmain'>
+                <div className='optionsicone'><LiaBarcodeSolid /></div>
+                <div className='optionstexto'>Pagar</div>
+            </div>
+
+            <div className='optionsmain'>
+                <div className='optionsicone'><RiLoopRightLine /></div>
+                <div className='optionstexto'>Débito Automático</div>
+            </div>
+
+            <div className='optionsmain'>
+                <div className='optionsicone'><LuHandCoins /></div>
+                <div className='optionstexto'>Empréstimos</div>
+            </div>
+
+            <div className='optionsmain'>
+                <div className='optionsicone'><LiaMoneyBillSolid /></div>
+                <div className='optionstexto'>Transferir</div>
+            </div>
+        </div>
+        <div className="ads">
+            <div className="banner">
+                <p>Até <strong>R$ {emp}</strong> disponíveis para empréstimo.</p>
+                <div className="empicon"><PiCoinVerticalLight /></div>
+            </div>
+        </div>
+        <div className="historico">
+            <p>Histórico</p>
+            <div className="histicons">
+                <FaArrowUpFromBracket />
+                <FaSignal />
+            </div>
+        </div>
+        <div className="centbusca">
+            <div className="busca">
+                <HiMiniMagnifyingGlass />
+                <p>Buscar</p>
+            </div>
+        </div>
+        <div className="compras">
+
         </div>
     </div>
 )}

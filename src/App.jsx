@@ -16,7 +16,7 @@ useEffect(() => {
   // Primeiro mostra o splash-logo
   const splashTimer = setTimeout(() => {
     setShowSplash(false);
-  }, 2550); // tempo total da splash (logo + faceid)
+  }, 2250); // tempo total da splash (logo + faceid)
 
   // Depois de 1s, mostra o faceid (ajuste o tempo como quiser)
   const faceIdTimer = setTimeout(() => {

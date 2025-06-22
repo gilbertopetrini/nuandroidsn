@@ -3,7 +3,7 @@
     height: fit-content;
     padding-top: env(safe-area-inset-top);
     background-color: black;
-    border-bottom: 2px solid #232323;
+
 }
 .barra1{
     display: flex;
@@ -58,13 +58,138 @@
     padding-bottom: 5px;
 }
 .rend p{
-    font-size: 15px;
-    padding: 5px 0 0 5px;
+    font-size: 14px;
+    padding: 0 0 0 3px;
 }
 .rend{
     display: flex;
+    height: 13px;
     align-items: center;
     color: #62B87E;
     display: flex;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.novidade{
+    height: 20px;
+    width: 70px;
+    background-color: #7931b8;
+    color: white;
     font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.options{
+    display: flex;
+    width: 414px;
+    overflow-y: hidden;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #232323;
+}
+.optionsmain{
+  width: 76px;
+  height: 130px;
+  position: relative;
+  margin-right: 14px;
+  padding-left: 25px;
+}
+.optionsicone{
+  width: 76px;
+  height: 76px;
+  border-radius: 41px;
+  color: white;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.optionsicone2{
+  width: 76px;
+  height: 76px;
+  border-radius: 41px;
+  color: white;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.optionstexto{
+  width: 76px;
+  height: 51px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+}
+.ads{
+    height: fit-content;
+    width: fit-content;
+    padding: 0 25px;
+    background-color: #000000;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 364px;
+    background-color: #2A276E;
+    color: white;
+    font-weight: 200;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 20px;
+}
+.empicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    background-color: #1F1B4F;
+    height: 50px;
+    width: 60px;
+    border-radius: 50%;
+    color: #AF7BF9;
+}
+.historico{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0 25px;
+    font-size: 18px;
+    height: 60px;
+}
+.histicons{
+    display: flex;
+    color: #AF7BF9;
+    font-size: 22px;
+    gap: 20px;
+}
+.centbusca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.busca{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 0 20px;
+    color: #A1A1A1;
+    height: 45px;
+    width: 364px;
+    background-color: #222222;
+    border-radius: 25px;
+}
+.compras{
+    height: 200px;
 }
