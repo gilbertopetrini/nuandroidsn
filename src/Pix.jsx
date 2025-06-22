@@ -36,13 +36,13 @@ function Pix() {
   }, []);
   return (
     <motion.div
-  style={{ backgroundColor: 'black', minHeight: '100vh' }}
-  variants={pageVariants}
-  initial="initial"
-  animate="animate"
-  exit="exit"
-  transition={{ duration: 0.1 }}
->
+        style={{ backgroundColor: 'black', minHeight: '100vh' }}
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.1 }}
+    >   
     <div className='bodi'>
         <div className='menudecima' >
             <div onClick={() => navigate('/')}>

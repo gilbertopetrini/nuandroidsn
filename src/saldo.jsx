@@ -19,6 +19,14 @@ import { FaArrowUpFromBracket } from "react-icons/fa6";
 import { FaSignal } from "react-icons/fa";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
+import { motion } from 'framer-motion';
+
+const pageVariants = {
+  initial: { opacity: 1, x: 100 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 1, x: -100 },
+};
+
 function Saldo() {
     const navigate = useNavigate();
 
@@ -59,6 +67,14 @@ function Saldo() {
     }, []);
 
   return (
+    <motion.div
+            style={{ backgroundColor: 'black', minHeight: '100vh' }}
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.1 }}
+        >  
     <div className="mainSaldo">
         <div className="barra1" onClick={() => navigate('/')}>
             <RiArrowLeftSLine/>
@@ -169,6 +185,7 @@ function Saldo() {
 
         </div>
     </div>
+    </motion.div> 
 )}
 
 export default Saldo;

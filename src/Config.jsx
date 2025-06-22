@@ -17,6 +17,16 @@ function Config() {
   const [invest, setInvest] = useState('');
   const [rendido, setRendido] = useState('');
 
+  useEffect(() => {
+    // Aplica o estilo ao body quando a página monta
+    document.body.style.backgroundColor = '#591E8C';
+
+    // Limpa ao sair da página
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
+  
   const removerFoto = () => {
     localStorage.removeItem('fotoPerfil');
     setFotoPerfil('');
