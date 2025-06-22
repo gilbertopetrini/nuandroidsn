@@ -7,6 +7,11 @@
   
 }
 
+.no-scroll {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
 @supports (-webkit-touch-callout: none) {
   body::-webkit-scrollbar {
     display: none;

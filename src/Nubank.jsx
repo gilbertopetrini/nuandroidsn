@@ -50,6 +50,7 @@ function Nuu() {
       if (window.scrollY === 0) {
         startY.current = e.touches[0].clientY;
         hasPulled.current = false;
+        document.body.style.overflow = 'hidden';
       }
     };
 
@@ -61,6 +62,7 @@ function Nuu() {
     if (window.scrollY === 0 && distance > 0) {
       // Previne o comportamento padrão para parar a rolagem nativa ao puxar para atualizar
       e.preventDefault();
+      
       if (distance > 50 && !hasPulled.current) { // Garante que só acione uma vez por puxada
         hasPulled.current = true;
         setShowRefresh(true);
@@ -78,6 +80,7 @@ function Nuu() {
         setShowBlackFlash(false);
       }, 120);
     }
+    document.body.style.overflow = 'auto';
   };
 
   
