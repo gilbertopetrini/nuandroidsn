@@ -147,21 +147,21 @@ function Config() {
   };
   
   return (
-    <div className='mainc' style={{ padding: '20px' }}>
+    <div className='mainc'>
       <h2>Configurar Interface</h2>
       <label>
-          Foto de perfil :
-        <input type="file" accept="image/*" onChange={handleFotoChange} />
+          Foto de perfil : <br/>
+        <input className='perfil' type="file" accept="image/*" onChange={handleFotoChange} />
       </label>
-      <button className='input' onClick={removerFoto}>Remover</button>
+      <button className='button' onClick={removerFoto}>Remover</button>
 
       <label>
-        Nome: 
+        Nome: <br/>
         <input className='input' placeholder='Somente o primeiro' value={nome} onChange={(e) => setNome(e.target.value)} />
       </label>
 
       <label> 
-        Saldo: 
+        Saldo: <br/>
         <input
           className='input'
           value={saldo}
@@ -171,7 +171,7 @@ function Config() {
       </label>
 
       <label>
-        Emprést: 
+        Emprést: <br/>
         <input
           className='input'
           value={emp}
@@ -181,7 +181,7 @@ function Config() {
       </label>
 
       <label>
-        Fatura: 
+        Fatura: <br/>
         <input
           className='input'
           value={fat}
@@ -191,7 +191,7 @@ function Config() {
       </label>
 
       <label>
-        Limite: 
+        Limite: <br/>
         <input
           className='input'
           value={limit}
@@ -201,7 +201,7 @@ function Config() {
       </label>
 
       <label>
-        Total investido: 
+        Total investido: <br/>
         <input
           className='input'
           value={invest}
@@ -211,7 +211,7 @@ function Config() {
       </label>
 
       <label>
-        Total rendido: 
+        Total rendido: <br/>
         <input
           className='input'
           value={rendido}
@@ -220,10 +220,10 @@ function Config() {
         />
       </label>
       
-      <button className='input' onClick={salvar}>Salvar e voltar</button>
-
+      <button className='button' onClick={salvar}>Salvar e voltar</button>
+      <h2>Gerador de Notificação</h2>
       <label>
-        Valor pix: 
+        Valor pix: <br/>
         <input
           className='input'
           value={valorpix}
@@ -232,11 +232,11 @@ function Config() {
         />  
       </label>
       <label>
-        Nome pix: 
+        Nome pix: <br/>
         <input className='input' placeholder='Nome completo' value={nomepix} onChange={(e) => setNomepix(e.target.value)} />
       </label>
 
-      <button className='input' onClick={simularPix}>pix</button>
+      <button className='button' onClick={simularPix}>Simular Notificação</button>
 
       
     </div>

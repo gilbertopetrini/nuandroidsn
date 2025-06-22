@@ -10,13 +10,22 @@ input::placeholder {
 
 .mainc{
 width: 414px;
+height: 1300px;
 display: flex;
+justify-content: center;
+align-items: center;
 flex-direction: column;
 gap: 40px;
 }
 .input{
   width: 250px;
-  height: 60px;
-  font-size: 20px;
-  margin-left: 20px;
+  height: 30px;
+  font-size: 17px;
+}
+.button{
+  width: 250px;
+  height: 30px;
+  background-color: blueviolet;
+  border: none;
+  color: white;
 }
