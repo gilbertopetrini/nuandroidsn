@@ -4,7 +4,6 @@
     width: 414px;
     height: fit-content;
     padding-top: env(safe-area-inset-top);
-    background-color: black;
     width: 100%;
 
 }

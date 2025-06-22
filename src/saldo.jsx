@@ -21,6 +21,16 @@ import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
 function Saldo() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+    // Aplica o estilo ao body quando a página monta
+    document.body.style.backgroundColor = 'black';
+
+    // Limpa ao sair da página
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
     
     const [nome, setNome] = useState('');
         const [saldo, setSaldo] = useState('');

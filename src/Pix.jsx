@@ -14,9 +14,19 @@ import { MdCurrencyExchange } from "react-icons/md";
 import { MdOutlineShield } from "react-icons/md";
 import { HiMiniAdjustmentsVertical } from "react-icons/hi2";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { useState, useEffect } from 'react'
+
 
 function Pix() {
      const navigate = useNavigate();
+
+    useEffect(() => {
+    document.body.style.backgroundColor = 'black';
+
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
   return (
     <div className='bodi'>
         <div className='menudecima' >
