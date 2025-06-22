@@ -5,26 +5,39 @@ import Pix from './Pix';
 import './Ape.css'
 import { useState, useEffect } from "react";
 import logo from './assets/tela11.png';
+import faceid from './assets/faceid.gif'
 
 function App() {
- const [showSplash, setShowSplash] = useState(true);
+const [showSplash, setShowSplash] = useState(true);
+const [showFaceId, setShowFaceId] = useState(false);
 
-  useEffect(() => {
-    // Exibe splash por 2 segundos ao carregar o site
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 2000); // duração da animação em ms
+useEffect(() => {
+  // Primeiro mostra o splash-logo
+  const splashTimer = setTimeout(() => {
+    setShowSplash(false);
+  }, 2400); // tempo total da splash (logo + faceid)
 
-    return () => clearTimeout(timer);
-  }, []);
+  // Depois de 1s, mostra o faceid (ajuste o tempo como quiser)
+  const faceIdTimer = setTimeout(() => {
+    setShowFaceId(true);
+  }, 400); // aparece 1 segundo depois
 
-  if (showSplash) {
-    return (
-      <div className="splash-container">
-        <img src={logo} className="splash-logo" alt="Logo" />
-      </div>
-    );
-  }
+  return () => {
+    clearTimeout(splashTimer);
+    clearTimeout(faceIdTimer);
+  };
+}, []);
+
+if (showSplash) {
+  return (
+    <div className="splash-container">
+      <img src={logo} className="splash-logo" alt="Logo" />
+      {showFaceId && (
+        <img src={faceid} className="splash-logo2" alt="Face ID" />
+      )}
+    </div>
+  );
+}
 
   return (
     <Routes>
