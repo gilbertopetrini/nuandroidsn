@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: space-between;
     background-color: black;
-    color: white;
+    color: #A6A6A6;
     font-size: 23px;
     padding: 25px;
 }

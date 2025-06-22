@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Config.css'
 
-
 function Config() {
   const [token, setToken] = useState(null);
   const [nome, setNome] = useState('');
@@ -97,6 +96,56 @@ function Config() {
     navigate('/');
   };
 
+  // --- Função utilitária para formatação de dinheiro ---
+  const formatMoneyInput = (value) => {
+    // Remove todos os caracteres não-dígitos
+    const cleanValue = value.replace(/\D/g, '');
+
+    // Se estiver vazio, retorna string vazia
+    if (!cleanValue) {
+      return '';
+    }
+
+    // Converte para número, divide por 100 para obter as casas decimais
+    const numberValue = parseInt(cleanValue, 10) / 100;
+
+    // Formata usando Intl.NumberFormat para o locale pt-BR
+    return new Intl.NumberFormat('pt-BR', {
+      style: 'decimal',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(numberValue);
+  };
+
+  // --- Handlers para formatar as entradas ---
+  const handleSaldoChange = (e) => {
+    setSaldo(formatMoneyInput(e.target.value));
+  };
+
+  const handleEmpChange = (e) => {
+    setEmp(formatMoneyInput(e.target.value));
+  };
+
+  const handleFatChange = (e) => {
+    setFat(formatMoneyInput(e.target.value));
+  };
+
+  const handleLimitChange = (e) => {
+    setLimit(formatMoneyInput(e.target.value));
+  };
+
+  const handleInvestChange = (e) => {
+    setInvest(formatMoneyInput(e.target.value));
+  };
+
+  const handleRendidoChange = (e) => {
+    setRendido(formatMoneyInput(e.target.value));
+  };
+
+  const handleValorpixChange = (e) => {
+    setValorpix(formatMoneyInput(e.target.value));
+  };
+  
   return (
     <div className='mainc' style={{ padding: '20px' }}>
       <h2>Configurar Interface</h2>
@@ -113,32 +162,62 @@ function Config() {
 
       <label> 
         Saldo: 
-        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={saldo} onChange={(e) => setSaldo(e.target.value)} />
+        <input
+          className='input'
+          value={saldo}
+          onChange={handleSaldoChange} // Usa o novo handler
+          inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+        />
       </label>
 
       <label>
         Emprést: 
-        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={emp} onChange={(e) => setEmp(e.target.value)} />
+        <input
+          className='input'
+          value={emp}
+          onChange={handleEmpChange} // Usa o novo handler
+          inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+        />
       </label>
 
       <label>
         Fatura: 
-        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={fat} onChange={(e) => setFat(e.target.value)} />
+        <input
+          className='input'
+          value={fat}
+          onChange={handleFatChange} // Usa o novo handler
+          inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+        />
       </label>
 
       <label>
         Limite: 
-        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={limit} onChange={(e) => setLimit(e.target.value)} />
+        <input
+          className='input'
+          value={limit}
+          onChange={handleLimitChange} // Usa o novo handler
+          inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+        />
       </label>
 
       <label>
         Total investido: 
-        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={invest} onChange={(e) => setInvest(e.target.value)} />
+        <input
+          className='input'
+          value={invest}
+          onChange={handleInvestChange} // Usa o novo handler
+          inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+        />
       </label>
 
       <label>
         Total rendido: 
-        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={rendido} onChange={(e) => setRendido(e.target.value)} />
+        <input
+          className='input'
+          value={rendido}
+          onChange={handleRendidoChange} // Usa o novo handler
+          inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+        />
       </label>
       
       <button className='input' onClick={salvar}>Salvar e voltar</button>

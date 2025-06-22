@@ -18,7 +18,7 @@ import { PiCoinVerticalLight } from "react-icons/pi";
 import { FaArrowUpFromBracket } from "react-icons/fa6";
 import { FaSignal } from "react-icons/fa";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
-
+import reload from './assets/reload.gif'; 
 import { motion } from 'framer-motion';
 
 const pageVariants = {
@@ -28,6 +28,7 @@ const pageVariants = {
 };
 
 function Saldo() {
+    
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -39,6 +40,60 @@ function Saldo() {
       document.body.style.backgroundColor = '';
     };
   }, []);
+
+    const [showRefresh, setShowRefresh] = useState(false);
+    const startY = useRef(0);
+    const hasPulled = useRef(false);
+    const [showBlackFlash, setShowBlackFlash] = useState(false);
+
+    useEffect(() => {
+    const handleTouchStart = (e) => {
+      if (window.scrollY === 0) {
+        startY.current = e.touches[0].clientY;
+        hasPulled.current = false;
+      }
+    };
+
+  const handleTouchMove = (e) => {
+    const currentY = e.touches[0].clientY;
+    const distance = currentY - startY.current;
+
+    // Procede apenas se estiver no topo e puxando para baixo
+    if (window.scrollY === 0 && distance > 0) {
+      // Previne o comportamento padrão para parar a rolagem nativa ao puxar para atualizar
+      e.preventDefault();
+      if (distance > 50 && !hasPulled.current) { // Garante que só acione uma vez por puxada
+        hasPulled.current = true;
+        setShowRefresh(true);
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (hasPulled.current) {
+      setShowBlackFlash(true);
+      setTimeout(() => {
+        setShowRefresh(false);
+      }, 1200); // tempo da "falsa atualização"
+      setTimeout(() => {
+        setShowBlackFlash(false);
+      }, 120);
+    }
+  };
+
+  
+
+  // Adicione passive: false ao touchmove para permitir preventDefault
+  window.addEventListener('touchstart', handleTouchStart);
+  window.addEventListener('touchmove', handleTouchMove, { passive: false });
+  window.addEventListener('touchend', handleTouchEnd);
+
+  return () => {
+    window.removeEventListener('touchstart', handleTouchStart);
+    window.removeEventListener('touchmove', handleTouchMove);
+    window.removeEventListener('touchend', handleTouchEnd);
+  };
+}, []);
     
     const [nome, setNome] = useState('');
         const [saldo, setSaldo] = useState('');
@@ -67,6 +122,7 @@ function Saldo() {
     }, []);
 
   return (
+    
     <motion.div
             style={{ backgroundColor: 'black', minHeight: '100vh' }}
             variants={pageVariants}
@@ -76,6 +132,10 @@ function Saldo() {
             transition={{ duration: 0.1 }}
         >  
     <div className="mainSaldo">
+        <div className={`flash-overlay ${showBlackFlash ? 'show-flash' : ''}`}></div>
+          <div className={`pull-refresh ${showRefresh ? 'show' : ''}`}>
+            <img className="gif" src={reload}/>
+          </div>
         <div className="barra1" onClick={() => navigate('/')}>
             <RiArrowLeftSLine/>
             <HiOutlineQuestionMarkCircle/>

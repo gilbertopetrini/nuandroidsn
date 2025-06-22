@@ -1,5 +1,42 @@
 
+.gif{
+  height: 35px;
+  width: 35px;
+  margin-top: 18px;
+}
+.pull-refresh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: black;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  color: gray;
+  transform: translateY(-100%);
+  transition: transform 0.1s ease;
+  z-index: 1000;
+}
+.pull-refresh.show {
+  transform: translateY(0);
+}
+.flash-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0; /* Começa invisível */
+  z-index: 9999; /* Garante que fique por cima de tudo */
+  pointer-events: none; /* Permite interagir com elementos por baixo quando invisível */
+}
 
+.flash-overlay.show-flash {
+  opacity: 1; /* Fica visível (preto) */
+}
 .mainSaldo{
     width: 414px;
     height: fit-content;
