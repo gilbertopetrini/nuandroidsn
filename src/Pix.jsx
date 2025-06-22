@@ -16,6 +16,13 @@ import { HiMiniAdjustmentsVertical } from "react-icons/hi2";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { useState, useEffect } from 'react'
 
+import { motion } from 'framer-motion';
+
+const pageVariants = {
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: -100 },
+};
 
 function Pix() {
      const navigate = useNavigate();
@@ -28,6 +35,13 @@ function Pix() {
     };
   }, []);
   return (
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.4 }}
+    >
     <div className='bodi'>
         <div className='menudecima' >
             <div onClick={() => navigate('/')}>
@@ -122,6 +136,7 @@ function Pix() {
             </div>
         </div>
     </div>
+    </motion.div>
   );
 }
 

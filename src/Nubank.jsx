@@ -18,6 +18,7 @@ import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 
+
 function BotaoOlho({ visivel, setVisivel }) {
     return (
       <p className='btn' 
@@ -117,6 +118,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
   setFotoPerfil(foto || '/pfp.png');  // ou '/pfp.png' conforme sua pasta
 }, []);
 
+  
   return (
     <div className="main">
       <div className={`flash-overlay ${showBlackFlash ? 'show-flash' : ''}`}></div>
