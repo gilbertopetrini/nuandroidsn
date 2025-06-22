@@ -15,6 +15,8 @@ function Config() {
   const [nomepix, setNomepix] = useState('');
   const navigate = useNavigate();
   const [fotoPerfil, setFotoPerfil] = useState('');
+  const [invest, setInvest] = useState('');
+  const [rendido, setRendido] = useState('');
 
   const handleFotoChange = (e) => {
   const file = e.target.files[0];
@@ -55,11 +57,15 @@ function Config() {
     const empSalvo = localStorage.getItem('emp');
     const fatSalvo = localStorage.getItem('fat');
     const limitSalvo = localStorage.getItem('limit');
+    const investSalvo = localStorage.getItem('invest');
+    const rendidoSalvo = localStorage.getItem('rendido');
     if (nomeSalvo) setNome(nomeSalvo);
     if (saldoSalvo) setSaldo(saldoSalvo);
     if (empSalvo) setEmp(empSalvo);
     if (fatSalvo) setFat(fatSalvo);
     if (limitSalvo) setLimit(limitSalvo);
+    if (investSalvo) setInvest(investSalvo);
+    if (rendidoSalvo) setRendido(rendidoSalvo);
 
     const fotoSalva = localStorage.getItem('fotoPerfil');
     if (fotoSalva) setFotoPerfil(fotoSalva);
@@ -71,6 +77,8 @@ function Config() {
     localStorage.setItem('emp', emp);
     localStorage.setItem('fat', fat);
     localStorage.setItem('limit', limit)
+    localStorage.setItem('invest', invest)
+    localStorage.setItem('rendido', rendido)
     localStorage.setItem('fotoPerfil', fotoPerfil);
 
     navigate('/');
@@ -107,6 +115,17 @@ function Config() {
         Limite: 
         <input className='input' placeholder='Respeite a formatacão 0.000,00' value={limit} onChange={(e) => setLimit(e.target.value)} />
       </label>
+
+      <label>
+        Total investido: 
+        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={invest} onChange={(e) => setInvest(e.target.value)} />
+      </label>
+
+      <label>
+        Total rendido: 
+        <input className='input' placeholder='Respeite a formatacão 0.000,00' value={rendido} onChange={(e) => setRendido(e.target.value)} />
+      </label>
+      
       <button className='input' onClick={salvar}>Salvar e voltar</button>
 
       <label>

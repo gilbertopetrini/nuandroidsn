@@ -1,0 +1,70 @@
+.mainSaldo{
+    width: 414px;
+    height: fit-content;
+    padding-top: env(safe-area-inset-top);
+    background-color: black;
+    border-bottom: 2px solid #232323;
+}
+.barra1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #A6A6A6;
+    font-size: 25px;
+    padding: 25px 25px 30px 25px ;
+}
+.saldodisp{
+    height: fit-content;
+    width: 414px;
+    color: white;
+    padding: 0 25px 35px 25px;
+}
+.saldodisp p{
+    font-size: 15px;
+    color: #A6A6A6;
+}
+.saldogrande{
+    font-size: 35px;
+    font-weight: 500;
+}
+.infos{
+    height: fit-content;
+    width: 414px;
+    padding: 10px 25px 30px 25px ;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.esq{
+    display: flex;
+}
+.infosfirsticon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding-right: 15px;
+}
+.dir{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A6A6A6;
+}
+.infostext p:first-child{
+    color: #A6A6A6;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+.rend p{
+    font-size: 15px;
+    padding: 5px 0 0 5px;
+}
+.rend{
+    display: flex;
+    align-items: center;
+    color: #62B87E;
+    display: flex;
+    font-size: 13px;
+}

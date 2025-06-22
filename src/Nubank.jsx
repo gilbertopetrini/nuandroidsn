@@ -92,6 +92,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
   const [emp, setEmp] = useState('');
   const [fat, setFat] = useState('');
   const [limit, setLimit] = useState('');
+  const [invest, setInvest] = useState('');
 
   useEffect(() => {
     const nomeSalvo = localStorage.getItem('nome');
@@ -99,11 +100,14 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
     const empSalvo = localStorage.getItem('emp');
     const fatSalvo = localStorage.getItem('fat');
     const limitSalvo = localStorage.getItem('limit');
+    const investSalvo = localStorage.getItem('invest');
+    
     if (nomeSalvo) setNome(nomeSalvo);
     if (saldoSalvo) setSaldo(saldoSalvo);
     if (empSalvo) setEmp(empSalvo);
     if (fatSalvo) setFat(fatSalvo);
     if (limitSalvo) setLimit(limitSalvo);
+    if (investSalvo) setInvest(investSalvo);
   }, []);
 
   const [fotoPerfil, setFotoPerfil] = useState('');
@@ -153,8 +157,8 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
         </div>
       </div>
 
-      <div className="preto1">
-        <div>
+      <div className="preto1" onClick={() => navigate('/Saldo ')}>
+        <div >
           <p>Saldo em conta</p>
           <p className="saldo">{isEyeVisible ? ("R$ "+saldo || '0,00') : '••••'}</p>
         </div>
@@ -211,7 +215,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
           </div>
           <p className='p2'>Fatural Atual</p>
           <p className='p3'>{isEyeVisible ? ("R$ "+fat || '0,00') : '••••'}</p>
-          <p className='p4'>Limite disponível de {isEyeVisible ? ("R$ "+limit || '0,00') : '••••'}</p>
+          <p className='p4'>Limite disponível de {isEyeVisible ? ("R$ "+ limit || '0,00') : '••••'}</p>
         </div>
       </div>
 
