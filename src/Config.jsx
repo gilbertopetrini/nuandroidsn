@@ -228,7 +228,12 @@ function Config() {
       </label>
       <label>
         Nome pix: 
-        <input className='input' placeholder='Nome completo' value={nomepix} onChange={(e) => setNomepix(e.target.value)} />
+        <input
+          className='input'
+          value={valorpix}
+          onChange={handleValorpixChange} // Usa o novo handler
+          inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+        />
       </label>
 
       <button className='input' onClick={simularPix}>pix</button>
