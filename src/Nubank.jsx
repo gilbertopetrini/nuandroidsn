@@ -37,7 +37,7 @@ function Nuu() {
 
   useEffect(() => {
     // Aplica o estilo ao body quando a página monta
-    document.body.style.backgroundColor = '#591E8C;';
+    document.body.style.backgroundColor = '#591E8C';
 
     // Limpa ao sair da página
     return () => {
