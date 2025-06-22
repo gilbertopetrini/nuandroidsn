@@ -64,7 +64,7 @@ function Pix() {
         </div>
         <div className='mainpix2'>
             <div className='faixadeiconespix'>
-                <div className='iconepixs'>
+                <div className='iconepixs' onClick={() => navigate('/Transferir ')}>
                     <div className='iconemainpix'><LiaMoneyBillSolid/></div>
                     <div className='textodoicone'>Transferir</div>
                 </div>

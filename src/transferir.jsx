@@ -74,7 +74,7 @@ function Transferir() {
     >  
 
     <div className="mainTransferir">
-        <div className="menutrans"><FaXmark /> <MdQrCode /></div>
+        <div className="menutrans"onClick={() => navigate('/Pix ')}><FaXmark /> <MdQrCode /></div>
         <div className="trans1">
             <p className="line0">Qual é o valor da <br/>transferência?</p>
             <div className="line">
