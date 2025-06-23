@@ -17,6 +17,8 @@ import { FiSmartphone } from "react-icons/fi";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
 
 
 function BotaoOlho({ visivel, setVisivel }) {

@@ -3,13 +3,14 @@ import Config from './Config';
 import Pix from './Pix';
 import Saldo from './saldo';
 import Transferir from './transferir';
+import Login from './login';
 import './Ape.css'
 import { useState, useEffect } from "react";
 import logo from './assets/tela11.png';
 import faceid from './assets/faceid.gif';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-
+import ProtectedRoute from "./protectedRoute.jsx";
 
 function App() {
   const location = useLocation();
@@ -47,11 +48,12 @@ if (showSplash) {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Nuu />} />
-        <Route path="/config" element={<Config />} />
-        <Route path="/pix" element={<Pix />} />
-        <Route path="/saldo" element={<Saldo />} />
-        <Route path="/transferir" element={<Transferir />} />
+        <Route path="/" element={<ProtectedRoute> <Nuu /> </ProtectedRoute>} />
+        <Route path="/config" element={<ProtectedRoute> <Config /> </ProtectedRoute>} />
+        <Route path="/pix" element={<ProtectedRoute> <Pix /> </ProtectedRoute>} />
+        <Route path="/saldo" element={<ProtectedRoute> <Saldo /> </ProtectedRoute>} />
+        <Route path="/transferir" element={<ProtectedRoute> <Transferir /> </ProtectedRoute>} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </AnimatePresence>
   );
