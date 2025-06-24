@@ -38,11 +38,9 @@
   opacity: 1; /* Fica visível (preto) */
 }
 .mainSaldo{
-    width: 414px;
     height: fit-content;
     padding-top: env(safe-area-inset-top);
     width: 100%;
-
 }
 .barra1{
     display: flex;
@@ -54,7 +52,7 @@
 }
 .saldodisp{
     height: fit-content;
-    width: 414px;
+    width: 100%;
     color: white;
     padding: 0 25px 35px 25px;
 }
@@ -68,7 +66,7 @@
 }
 .infos{
     height: fit-content;
-    width: 414px;
+    width: 100%;
     padding: 10px 25px 30px 25px ;
     color: white;
     display: flex;
@@ -122,7 +120,7 @@
 }
 .options{
     display: flex;
-    width: 414px;
+    width: fit-content;
     overflow-y: hidden;
     margin-top: 20px;
     padding-bottom: 20px;
@@ -203,10 +201,10 @@
     display: flex;
     justify-content: space-between;
     color: white;
-    padding: 0 25px;
+    margin: 0 25px;
     font-size: 18px;
     height: 60px;
-    width: 414px;
+    width: 100%;
 }
 .histicons{
     display: flex;
@@ -219,7 +217,7 @@
     justify-content: center;
     align-items: center;
     height: fit-content;
-    width: 414px;
+    width: 100%;
 }
 .busca{
     display: flex;
@@ -228,9 +226,10 @@
     padding: 0 20px;
     color: #A1A1A1;
     height: 45px;
-    width: 364px;
+    width: 100%;
     background-color: #222222;
     border-radius: 25px;
+    margin: 0 25px;
 }
 .compras{
     height: 200px;

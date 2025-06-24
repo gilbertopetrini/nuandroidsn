@@ -33,7 +33,7 @@ function Saldo() {
 
     useEffect(() => {
     // Aplica o estilo ao body quando a página monta
-    document.body.style.backgroundColor = 'black';
+    document.body.style.backgroundColor = 'red';
 
     // Limpa ao sair da página
     return () => {
@@ -196,45 +196,55 @@ function Saldo() {
                 <MdKeyboardArrowRight/>
             </div>
         </div>
-        <div className="options">
-            <div className='optionsmain'>
-                <div className='optionsicone'><PiHandDeposit /></div>
-                <div className='optionstexto'>Depositar</div>
-            </div>
+        
+        <div className='centralizar'>
+            <div className="options">
+                <div className='optionsmain'>
+                    <div className='optionsicone'><PiHandDeposit /></div>
+                    <div className='optionstexto'>Depositar</div>
+                </div>
 
-            <div className='optionsmain'>
-                <div className='optionsicone'><LiaBarcodeSolid /></div>
-                <div className='optionstexto'>Pagar</div>
-            </div>
+                <div className='optionsmain'>
+                    <div className='optionsicone'><LiaBarcodeSolid /></div>
+                    <div className='optionstexto'>Pagar</div>
+                </div>
 
-            <div className='optionsmain'>
-                <div className='optionsicone'><RiLoopRightLine /></div>
-                <div className='optionstexto'>Débito Automático</div>
-            </div>
+                <div className='optionsmain'>
+                    <div className='optionsicone'><RiLoopRightLine /></div>
+                    <div className='optionstexto'>Débito Automático</div>
+                </div>
 
-            <div className='optionsmain'>
-                <div className='optionsicone'><LuHandCoins /></div>
-                <div className='optionstexto'>Empréstimos</div>
-            </div>
+                <div className='optionsmain'>
+                    <div className='optionsicone'><LuHandCoins /></div>
+                    <div className='optionstexto'>Empréstimos</div>
+                </div>
 
-            <div className='optionsmain'>
-                <div className='optionsicone'><LiaMoneyBillSolid /></div>
-                <div className='optionstexto'>Transferir</div>
+                <div className='optionsmain'>
+                    <div className='optionsicone'><LiaMoneyBillSolid /></div>
+                    <div className='optionstexto'>Transferir</div>
+                </div>
             </div>
         </div>
-        <div className="ads">
-            <div className="banner">
-                <p>Até <strong>R$ {emp}</strong> disponíveis para empréstimo.</p>
-                <div className="empicon"><PiCoinVerticalLight /></div>
+
+        <div className='centralizarcb'>
+            <div className="ads">
+                <div className="banner">
+                    <p>Até <strong>R$ {emp}</strong> disponíveis para empréstimo.</p>
+                    <div className="empicon"><PiCoinVerticalLight /></div>
+                </div>
             </div>
         </div>
-        <div className="historico">
-            <p>Histórico</p>
-            <div className="histicons">
-                <FaArrowUpFromBracket />
-                <FaSignal />
+
+        <div className='centralizar'>
+            <div className="historico">
+                <p>Histórico</p>
+                <div className="histicons">
+                    <FaArrowUpFromBracket />
+                    <FaSignal />
+                </div>
             </div>
         </div>
+
         <div className="centbusca">
             <div className="busca">
                 <HiMiniMagnifyingGlass />
