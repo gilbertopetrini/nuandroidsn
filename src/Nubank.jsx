@@ -180,78 +180,87 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
           <MdKeyboardArrowRight />
         </div>
       </div>
+      <div className='centralizar'>
+        <div className="preto2">
+          <div className='main1' onClick={() => navigate('/Pix')}>
+            <div className='iconemain'><PiPixLogoLight /></div>
+            <div className='textomain'>Área Pix e transferir</div>
+          </div>
+          <div className='main1'>
+            <div className='iconemain2'><LiaBarcodeSolid /></div>
+            <div className='textomain'>Pagar</div>
+          </div>
+          <div className='main1'>
+            <div className='iconemain2'><LuHandCoins /></div>
 
-      <div className="preto2">
-        <div className='main1' onClick={() => navigate('/Pix')}>
-          <div className='iconemain'><PiPixLogoLight /></div>
-          <div className='textomain'>Área Pix e transferir</div>
-        </div>
-        <div className='main1'>
-          <div className='iconemain2'><LiaBarcodeSolid /></div>
-          <div className='textomain'>Pagar</div>
-        </div>
-        <div className='main1'>
-          <div className='iconemain2'><LuHandCoins /></div>
-
-          <div className='textomain'>Pegar emprestado</div>
-        </div>
-        <div className='main1'>
-          <div className='iconemain2'><BsCurrencyDollar /></div>
-          <div className='textomain'>Converter limite</div>
-        </div>
-        <div className='main1'>
-          <div className='iconemain2'><FaInbox /></div>
-          <div className='emprestimo'>115% CDI</div>
-          <div className='textomain'>Caixinha turbo</div>
+            <div className='textomain'>Pegar emprestado</div>
+          </div>
+          <div className='main1'>
+            <div className='iconemain2'><BsCurrencyDollar /></div>
+            <div className='textomain'>Converter limite</div>
+          </div>
+          <div className='main1'>
+            <div className='iconemain2'><FaInbox /></div>
+            <div className='emprestimo'>115% CDI</div>
+            <div className='textomain'>Caixinha turbo</div>
+          </div>
         </div>
       </div>
 
-      <div className='preto3'>
-        <div className='header1'>
-          <div className='cc'>
-            <FaCreditCard />
+      <div className='centralizar'>
+        <div className='preto3'>
+          <div className='header1'>
+            <div className='cc'>
+              <FaCreditCard />
+            </div>
+            <div>Meus Cartões</div>
           </div>
-          <div>Meus Cartões</div>
-        </div>
-        <div className='header2'>
-          <p onClick={() => navigate('/config')}>
-             <strong>Aumente seu limite</strong> do cartão hoje com o Nu Limite Garantido
-          </p>
-          <img src={ccimg} className='ccimg' />
-        </div>
-      </div>
-
-      <div className='preto4'>
-        <div>
-          <div className='cartao'>
-            <p className='p1'>Cartão de crédito</p>
-            <MdKeyboardArrowRight className='cartao2' />
+          <div className='header2'>
+            <p onClick={() => navigate('/config')}>
+              <strong>Aumente seu limite</strong> do cartão hoje com o Nu Limite Garantido
+            </p>
+            <img src={ccimg} className='ccimg' />
           </div>
-          <p className='p2'>Fatural Atual</p>
-          <p className='p3'>{isEyeVisible ? ("R$ "+fat || '0,00') : '••••'}</p>
-          <p className='p4'>Limite disponível de {isEyeVisible ? ("R$ "+ limit || '0,00') : '••••'}</p>
         </div>
       </div>
 
-      <div className='preto5'>
-        <div>
-          <div className='cartao'>
-            <p className='p1'>Empréstimo</p>
-            <MdKeyboardArrowRight className='cartao2' />
+      <div className='centralizarcb'>
+        <div className='preto4'>
+          <div>
+            <div className='cartao'>
+              <p className='p1'>Cartão de crédito</p>
+              <MdKeyboardArrowRight className='cartao2' />
+            </div>
+            <p className='p2'>Fatural Atual</p>
+            <p className='p3'>{isEyeVisible ? ("R$ "+fat || '0,00') : '••••'}</p>
+            <p className='p4'>Limite disponível de {isEyeVisible ? ("R$ "+ limit || '0,00') : '••••'}</p>
           </div>
-          <p className='p2'>Valor disponível de até</p>
-          <p className='p3'>{isEyeVisible ? ("R$ "+emp || '0,00') : '••••'}</p>
         </div>
       </div>
 
-      <div className='preto6'>
-        <div>
-          <div className='cartao'>
-            <p className='p1'>Planeje suas contas</p>
-            <MdKeyboardArrowRight className='cartao2' />
+      <div className='centralizarcb'>
+        <div className='preto5'>
+          <div>
+            <div className='cartao'>
+              <p className='p1'>Empréstimo</p>
+              <MdKeyboardArrowRight className='cartao2' />
+            </div>
+            <p className='p2'>Valor disponível de até</p>
+            <p className='p3'>{isEyeVisible ? ("R$ "+emp || '0,00') : '••••'}</p>
           </div>
-          <p className='p2'>Acompanhe, pague e programe com a ajuda do Assistente de pagamentos.</p>
-          <div className='btnacessar'>Acessar</div>
+        </div>
+      </div>
+
+      <div className='centralizarcb'>
+        <div className='preto6'>
+          <div>
+            <div className='cartao'>
+              <p className='p1'>Planeje suas contas</p>
+              <MdKeyboardArrowRight className='cartao2' />
+            </div>
+            <p className='p22'>Acompanhe, pague e programe com a ajuda do Assistente de pagamentos.</p>
+            <div className='btnacessar'>Acessar</div>
+          </div>
         </div>
       </div>
 
