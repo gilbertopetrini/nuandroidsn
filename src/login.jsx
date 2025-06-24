@@ -35,7 +35,6 @@ function Login() {
               </p>
               <input className="inputlogin" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
               <input className="inputlogin" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
-              {/*<button className="btnlogin" onClick={handleCadastro}>Cadastrar</button>*/}
               <button className="btnlogin" onClick={handleLogin}>Entrar</button>
               </div>
             </div>
