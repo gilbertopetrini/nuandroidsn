@@ -7,7 +7,6 @@
 }
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
   width: 100%;
   overscroll-behavior: none;
   overflow-y: auto;
@@ -26,5 +25,5 @@ body {
 }
 html{
   background-color: #591E8C;
-  
+  float: none;
 }
