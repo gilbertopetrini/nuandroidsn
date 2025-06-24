@@ -28,7 +28,7 @@ function Pix() {
      const navigate = useNavigate();
 
     useEffect(() => {
-    document.body.style.backgroundColor = 'black';
+    document.body.style.backgroundColor = '';
 
     return () => {
       document.body.style.backgroundColor = '';
@@ -36,7 +36,7 @@ function Pix() {
   }, []);
   return (
     <motion.div
-        style={{ backgroundColor: 'black', minHeight: '100vh' }}
+        style={{ minHeight: '100vh' }}
         variants={pageVariants}
         initial="initial"
         animate="animate"

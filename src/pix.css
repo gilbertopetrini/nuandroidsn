@@ -22,13 +22,12 @@ body::-webkit-scrollbar {
 .bodi {
   overflow-x: hidden;
   width: 100%;
-  background-color: #000000;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   scrollbar-width: none;
 }
 .menudecima{
-    width: 414px;
+    width: 100%;
     height: fit-content;
     display: flex;
     justify-content: space-between;
@@ -39,7 +38,7 @@ body::-webkit-scrollbar {
 }
 .mainpix{
     padding: 25px;
-    width: 414px;
+    width: 100%;
     height: fit-content;
     padding-top: env(safe-area-inset-top);
     background-color: black;
@@ -52,7 +51,7 @@ body::-webkit-scrollbar {
     margin-bottom: 29px;
 }
 .barraroxa1{
-    width: 365px;
+    width: 100%;
     height: 48px;
     background-color: #32104D;
     border-radius: 22px;
@@ -63,7 +62,7 @@ body::-webkit-scrollbar {
     color: #BF8DF1;
 }
 .mainpix2{
-    width: 414px;
+    width: 100%;
     height: fit-content;
     padding-top: 20px;
     background-color: black;
@@ -105,7 +104,7 @@ body::-webkit-scrollbar {
 }
 
 .mainpix3{
-    width: 414px;
+    width: 100%;
     background-color: black;
     height: 150px;
     display: flex;
@@ -116,7 +115,7 @@ body::-webkit-scrollbar {
 
 .pixnocred{
     height: 86px;
-    width: 364px;
+    width: 100%;
     background-color: #47166F;
     border-radius: 17px;
     display: flex;
@@ -125,6 +124,7 @@ body::-webkit-scrollbar {
     padding: 0 20px;
     color: #BF8DF1;
     font-size: 15px;
+    margin: 0 25px;
 }
 .pnc{
     font-size: 35px;
@@ -134,7 +134,7 @@ body::-webkit-scrollbar {
     margin-left: 7px;
 }
 .mainpix4{
-    width: 414px;
+    width: 100%;
     background-color: black;
     height: 180px;
 }

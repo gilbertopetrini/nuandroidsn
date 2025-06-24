@@ -166,6 +166,7 @@ function Config() {
           value={saldo}
           onChange={handleSaldoChange} // Usa o novo handler
           inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+          maxlength="14"
         />
       </label>
 
@@ -176,6 +177,7 @@ function Config() {
           value={emp}
           onChange={handleEmpChange} // Usa o novo handler
           inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+          maxlength="14"
         />
       </label>
 
@@ -186,6 +188,7 @@ function Config() {
           value={fat}
           onChange={handleFatChange} // Usa o novo handler
           inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+          maxlength="14"
         />
       </label>
 
@@ -196,6 +199,7 @@ function Config() {
           value={limit}
           onChange={handleLimitChange} // Usa o novo handler
           inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+          maxlength="14"
         />
       </label>
 
@@ -206,6 +210,7 @@ function Config() {
           value={invest}
           onChange={handleInvestChange} // Usa o novo handler
           inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+          maxlength="14"
         />
       </label>
 
@@ -216,6 +221,7 @@ function Config() {
           value={rendido}
           onChange={handleRendidoChange} // Usa o novo handler
           inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+          maxlength="14"
         />
       </label>
       
@@ -228,6 +234,7 @@ function Config() {
           value={valorpix}
           onChange={handleValorpixChange} // Usa o novo handler
           inputMode="numeric" // Sugere teclado numérico em dispositivos móveis
+          maxlength="14"
         />  
       </label>
       <label>
@@ -237,7 +244,6 @@ function Config() {
 
       <button className='button' onClick={simularPix}>Simular Notificação</button>
 
-      
     </div>
   );
 }

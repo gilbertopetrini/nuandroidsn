@@ -33,7 +33,7 @@ function Saldo() {
 
     useEffect(() => {
     // Aplica o estilo ao body quando a página monta
-    document.body.style.backgroundColor = 'red';
+    document.body.style.backgroundColor = 'black';
 
     // Limpa ao sair da página
     return () => {
@@ -196,8 +196,8 @@ function Saldo() {
                 <MdKeyboardArrowRight/>
             </div>
         </div>
-        
-        <div className='centralizar'>
+
+        <div className='centralizarS'>
             <div className="options">
                 <div className='optionsmain'>
                     <div className='optionsicone'><PiHandDeposit /></div>
@@ -226,7 +226,7 @@ function Saldo() {
             </div>
         </div>
 
-        <div className='centralizarcb'>
+        <div className='centralizarcbS'>
             <div className="ads">
                 <div className="banner">
                     <p>Até <strong>R$ {emp}</strong> disponíveis para empréstimo.</p>
@@ -235,7 +235,7 @@ function Saldo() {
             </div>
         </div>
 
-        <div className='centralizar'>
+        <div className='centralizarS'>
             <div className="historico">
                 <p>Histórico</p>
                 <div className="histicons">

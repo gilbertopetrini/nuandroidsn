@@ -1,4 +1,20 @@
-
+.centralizarS{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.centralizarcbS{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-top: 2px solid #232323;
+}
 .gif{
   height: 35px;
   width: 35px;
@@ -121,10 +137,11 @@
 .options{
     display: flex;
     width: fit-content;
-    overflow-y: hidden;
     margin-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #232323;
+
+    overflow-x: hidden;
 }
 .optionsmain{
   width: 76px;
@@ -167,18 +184,21 @@
 }
 .ads{
     height: fit-content;
-    width: fit-content;
+    width: 100%;
     padding: 0 25px;
     background-color: #000000;
     margin-top: 25px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .banner{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    width: 364px;
+    width: 100%;
     background-color: #2A276E;
     color: white;
     font-weight: 300;
@@ -193,8 +213,8 @@
     font-size: 35px;
     background-color: #1F1B4F;
     height: 50px;
-    width: 60px;
-    border-radius: 50%;
+    width: 50px;
+    border-radius: 25px;
     color: #AF7BF9;
 }
 .historico{
