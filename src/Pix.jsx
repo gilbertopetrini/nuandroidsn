@@ -28,7 +28,7 @@ function Pix() {
      const navigate = useNavigate();
 
     useEffect(() => {
-    document.body.style.backgroundColor = '';
+    document.body.style.backgroundColor = 'black';
 
     return () => {
       document.body.style.backgroundColor = '';
