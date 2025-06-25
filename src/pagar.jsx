@@ -44,7 +44,7 @@ function Pagar() {
                             <div className='textospagar'>Boleto</div>
                         </div>
 
-                        <div className='optionpagar'>
+                        <div className='optionpagar' onClick={() => navigate('/Pix')}>
                             <div className='iconespagar'><PiPixLogoLight /></div>
                             <div className='textospagar'>Pix</div>
                         </div>
