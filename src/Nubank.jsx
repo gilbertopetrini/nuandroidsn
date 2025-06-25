@@ -186,7 +186,7 @@ const [isEyeVisible, setIsEyeVisible] = useState(true);
             <div className='iconemain'><PiPixLogoLight /></div>
             <div className='textomain'>Área Pix e transferir</div>
           </div>
-          <div className='main1'>
+          <div className='main1' onClick={() => navigate('/Pagar ')}>
             <div className='iconemain2'><LiaBarcodeSolid /></div>
             <div className='textomain'>Pagar</div>
           </div>

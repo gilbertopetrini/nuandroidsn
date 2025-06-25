@@ -4,6 +4,7 @@ import Pix from './Pix';
 import Saldo from './saldo';
 import Transferir from './transferir';
 import Login from './login';
+import Pagar from './pagar';
 import './Ape.css'
 import { useState, useEffect } from "react";
 import logo from './assets/tela11.png';
@@ -53,6 +54,7 @@ if (showSplash) {
         <Route path="/pix" element={<ProtectedRoute> <Pix /> </ProtectedRoute>} />
         <Route path="/saldo" element={<ProtectedRoute> <Saldo /> </ProtectedRoute>} />
         <Route path="/transferir" element={<ProtectedRoute> <Transferir /> </ProtectedRoute>} />
+        <Route path="/pagar" element={<ProtectedRoute> <Pagar /> </ProtectedRoute>} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </AnimatePresence>
