@@ -48,6 +48,7 @@
     display: flex;
     padding-left: 20px;
     border-radius: 10px;
+    font-size: 20px;
 }
 .inputlogin::placeholder{
     font-size: 18px;
