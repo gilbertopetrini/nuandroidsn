@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// https://vite.dev/config/
-export default {
+export default defineConfig({
   plugins: [
+    react(),
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
@@ -16,12 +16,12 @@ export default {
         theme_color: '#591E8C',
         icons: [
           {
-            src: '"./src/public/logo.png"',
+            src: '/logo.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '"./src/public/logo.png"',
+            src: '/logo.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -29,4 +29,4 @@ export default {
       }
     })
   ]
-}
+})
