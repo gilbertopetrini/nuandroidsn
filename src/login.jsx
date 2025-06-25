@@ -29,15 +29,15 @@ function Login() {
   };
     return(
         <div className="menulogin">
-          <div className="transparente">
-            <div>
+
+            <div className="containerlogin">
               <p>Um mundo financeiro <br/>sem complexidades.
               </p>
               <input className="inputlogin" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
               <input className="inputlogin" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
               <button className="btnlogin" onClick={handleLogin}>Entrar</button>
-              </div>
             </div>
+
         </div>
         
     )
