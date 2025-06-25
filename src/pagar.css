@@ -5,6 +5,17 @@
     justify-content: center;
     align-items: center;
     background-color: black;
+    margin: 0 25px;
+}
+.centralizarpagarballoon{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 0 25px;
+    flex-direction: column;
 }
 .mainPagar{
     height: 100vh;
@@ -106,6 +117,7 @@ width: 115px;
 .iconscolumn{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 @media (max-width: 338px) {
   .balloonesq{

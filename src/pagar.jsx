@@ -50,8 +50,7 @@ function Pagar() {
                         </div>
                     </div>
                 </div>
-                <div className='centralizarpagar'>
-                    <div className='iconscolumn'>
+                <div className='centralizarpagarballoon'>
                         <div className='pagarballoon'>
                             <div className='balloonesq'>
                                 <MdCurrencyExchange/>
@@ -64,14 +63,13 @@ function Pagar() {
 
                         <div className='pagarballoon'>
                             <div className='balloonesq'>
-                                <MdCurrencyExchange/>
+                                <MdOutlineLoop />
                                 <p>Boleto Automático</p>
                             </div>
                             <div className='balloonicon'>
                             <MdKeyboardArrowRight/>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </motion.div>
