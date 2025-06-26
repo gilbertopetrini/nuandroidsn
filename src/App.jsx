@@ -25,13 +25,8 @@ function App() {
     }, 2350); // tempo total da splash (logo + faceid)
 
     // Depois de 1s, mostra o faceid (ajuste o tempo como quiser)
-    const faceIdTimer = setTimeout(() => {
-      setShowFaceId(true);
-    }, 400); // aparece 1 segundo depois
-
     return () => {
-      clearTimeout(splashTimer);
-      clearTimeout(faceIdTimer);
+      clearTimeout(splashTimer)
     };
 }, []);
 
@@ -39,9 +34,6 @@ if (showSplash) {
   return (
     <div className="splash-container">
       <img src={logo} className="splash-logo" alt="Logo" />
-      {showFaceId && (
-        <img src={faceid} className="splash-logo2" alt="Face ID" />
-      )}
     </div>
   );
 }

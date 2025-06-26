@@ -53,10 +53,13 @@ function Config() {
     navigator.serviceWorker.ready.then((reg) => {
       reg.showNotification(title, {
         body: body,
-        icon: '/logo.png',
+        icon: '/logoan.png',
         vibrate: [200, 100, 200],
-        tag: 'pix-notification',
-        renotify: true
+        renotify: true,
+        tag: `${Date.now()}`,
+        data: { dateOfArrival: Date.now(), primaryKey: 1 },
+        actions: [],
+        badge: '/logoan.png'
       });
     });
   } else {
