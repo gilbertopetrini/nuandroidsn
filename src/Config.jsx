@@ -16,6 +16,12 @@ function Config() {
   const [rendido, setRendido] = useState('');
 
   useEffect(() => {
+  if ('Notification' in window && Notification.permission !== 'granted') {
+    Notification.requestPermission();
+  }
+}, []);
+
+  useEffect(() => {
     // Aplica o estilo ao body quando a página monta
     document.body.style.backgroundColor = '#591E8C';
 
@@ -43,18 +49,20 @@ function Config() {
   };
   // Função para mostrar a notificação local
   const showNotification = (title, body) => {
-    if (Notification.permission === 'granted') {
-      navigator.serviceWorker.getRegistration().then((reg) => {
-        reg.showNotification(title, {
-          body: body,
-          icon: '/logo.png', // ícone opcional do Pix
-          vibrate: [200, 100, 200],
-          tag: 'pix-notification',
-          renotify: true
-        });
+  if (Notification.permission === 'granted') {
+    navigator.serviceWorker.ready.then((reg) => {
+      reg.showNotification(title, {
+        body: body,
+        icon: '/logo.png',
+        vibrate: [200, 100, 200],
+        tag: 'pix-notification',
+        renotify: true
       });
-    }
-  };
+    });
+  } else {
+    alert("Permissão de notificação não concedida.");
+  }
+};
 
   // Simula uma notificação de Pix
   const simularPix = () => {
