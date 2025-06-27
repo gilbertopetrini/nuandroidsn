@@ -10,7 +10,7 @@ input::placeholder {
 
 .mainc{
 width: 414px;
-height: 1300px;
+height: 120%;
 display: flex;
 justify-content: center;
 align-items: center;
